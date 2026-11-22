@@ -1,31 +1,30 @@
-# PR: Initial theory and reproducibility snapshot
+# Draft PR: Research scaffold and reproducibility status
 
-## Summary
+## Scope
 
-- Establish the minimal spontaneously broken SU(2) Yang–Mills–Higgs model and conventions.
-- Review Ke, Liu, and Mahbub, arXiv:2611.13096v1.
-- Record the tree-level BRST/ST benchmark for an off-shell vector current with four on-shell physical legs.
-- Prove algebraically that \(J^\mu\to J^\mu+(q^2-m^2)K^\mu\) preserves the pole residue while shifting regular/contact terms.
-- Formulate the five-point on-shell-recursion proof target and identify its main obstructions.
-- Add symbolic and independent numerical checks for the off-shell projector identities.
-- Preserve the initial mixed-index implementation failure and corrected source snapshot.
+This draft establishes the research question, minimal SU(2)-Higgs model, literature map, and acceptance protocol for the study of off-shell vector currents and unstable-vector spin decomposition.
 
-## Local validation record
+## Local research snapshot
 
-The local snapshot records the following commands as passing:
+The local snapshot at commit a48377c055ce4929d67c4d996ab16f844458eb7a contains 48 tracked files, including derivations, scripts, tests, runtime records, native outputs, and a corrected SHA-256 manifest.
 
-- `python scripts/verify_projector_identities.py`
-- `python scripts/numeric_projector_scan.py` at 100, 1,000, and 10,000 points
-- `python scripts/verify_vertex_st_identity.py`
-- `python scripts/verify_offshell_ambiguity.py`
-- `python -m unittest discover -s tests -v` (4 tests)
+Local validation on 2026-11-23:
+- 4/4 unit tests passed.
+- Symbolic projector identities passed.
+- Numerical projector identity regression passed at 100, 1,000, and 10,000 samples; threshold 5e-11.
+- Local cubic W-Goldstone-Higgs vertex benchmark passed.
+- Off-shell pole-residue ambiguity regression passed.
 
-These results are reported from the local snapshot. They have not yet been independently rerun on GitHub Actions.
+The numeric scan is an algebraic identity regression, not a physical phase-space convergence study. The cubic-vertex benchmark is not a complete five-point ST validation.
 
-## Scope and limitations
+## Explicitly open
 
-The complete five-point Feynman amplitude and independent on-shell-recursive derivation are not claimed as complete. The BRST/ST relation is a field-theory benchmark, not a new theorem.
+- Complete five-point Feynman amplitude and all factorization residues.
+- Classification of allowed local K^mu shifts.
+- Independent on-shell-recursive derivation of the five-point current relation.
+- Loop-level and complex-pole extension.
+- Independent GitHub Actions rerun.
 
-## Reproducibility
+## Remote synchronization status
 
-The local snapshot contains runtime/hardware metadata, source and input hashes, run manifests, native outputs, and preserved failure records under `environment/`, `provenance/`, and `results/`.
+This PR is intentionally Draft. The remote branch currently contains the scaffold and review metadata, not the full 48-file local source tree. Do not merge this PR as a complete reproducibility release. The full local Git bundle is available in the originating ChatGPT conversation; its SHA-256 is recorded in provenance/remote-sync.md.
