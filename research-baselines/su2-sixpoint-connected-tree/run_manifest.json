@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "su2-neutral-six-point-tree-two-seeds",
+  "created_at": "2026-11-23T14:28:51Z",
+  "record_type": "run_manifest",
+  "project": {
+    "repository": "lm846802297-bit/off-shell-vector-polarization",
+    "project_id": "off-shell-vector-polarization",
+    "workstream_id": "su2-tree-gauge-closure"
+  },
+  "source": {
+    "commit_sha": "3b7146abfec3a729aca9431c41e2efc05b591ea9",
+    "script_path": "research-baselines/su2-sixpoint-connected-tree/check_connected_tree.py",
+    "script_sha256": "196974fe69fa540d3b3b364cda2f5d11933ca79a12616188401a36c999a05e0e"
+  },
+  "inputs": [
+    {
+      "name": "Pinned external fixture generation and gamma-matrix conventions",
+      "source": "lm846802297-bit/off-shell-vector-polarization",
+      "version": "3b7146abfec3a729aca9431c41e2efc05b591ea9",
+      "format": "python",
+      "uri": "https://github.com/lm846802297-bit/off-shell-vector-polarization/blob/3b7146abfec3a729aca9431c41e2efc05b591ea9/research-baselines/su2-sixpoint-double-higgs-radiation/check_double_higgs.py",
+      "bytes": 10195,
+      "sha256": "832d7a89d99c77aef808948d68ac98aa989d820b62c588b606e61b1599f37f24",
+      "transformation": "Only spinor fixtures and Dirac/momentum conventions reused; diagram generator, Rxi tensors and contracted unitary assembly are new."
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "model": "Minimal SU(2) Higgs, fixed neutral external lower components, massive chiral-Yukawa near and massless vectorlike far species",
+      "diagram_count": 27
+    },
+    "numerics": {
+      "seeds": [
+        142023,
+        642271
+      ],
+      "accepted_counts": [
+        8,
+        12
+      ],
+      "xi": [
+        0.43,
+        0.71,
+        1.0,
+        1.8,
+        2.65
+      ],
+      "dtype": "complex128",
+      "abs_denominator_cutoff": 0.22,
+      "scaled_gate": 1e-09
+    },
+    "conventions": {
+      "metric": "+---",
+      "momenta": "all incoming",
+      "fourier_phase": "exp(-ip.x)",
+      "spinors": "on-shell Dirac projections normalized to unit Euclidean norm"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "engine": "CPython",
+      "version": "3.12.14"
+    },
+    "dependencies": {
+      "numpy": "2.3.5",
+      "sympy": "1.14.0"
+    },
+    "hardware": {
+      "architecture": "x86_64",
+      "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "effective_process_affinity_cpus": 9,
+      "memory_bytes": 10451423232
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python research-baselines/su2-sixpoint-connected-tree/check_connected_tree.py --seed 142023 --points 8 --output research-baselines/su2-sixpoint-connected-tree/results-primary.json > research-baselines/su2-sixpoint-connected-tree/summary-primary.txt && PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python research-baselines/su2-sixpoint-connected-tree/check_connected_tree.py --seed 642271 --points 12 --output research-baselines/su2-sixpoint-connected-tree/results-holdout.json > research-baselines/su2-sixpoint-connected-tree/summary-holdout.txt",
+    "started_at": "2026-11-23T14:28:48Z",
+    "finished_at": "2026-11-23T14:28:51Z",
+    "exit_code": 0,
+    "wall_time_s": 3,
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "detached_commit",
+      "checkout_ref": null,
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null,
+      "working_tree_state": "dirty",
+      "dirty_paths": [
+        "research-baselines/su2-sixpoint-connected-tree/check_connected_tree.py",
+        "research/task_briefs/20261123-su2-sixpoint-connected-tree.md"
+      ]
+    }
+  },
+  "outputs": [
+    {
+      "path": "research-baselines/su2-sixpoint-connected-tree/results-primary.json",
+      "role": "signed-native-graph-fixtures",
+      "format": "json",
+      "sha256": "6d16781fad9926e22895538f61908a9aa0737b78c24424c699e17b812d81e954",
+      "bytes": 202573
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-connected-tree/results-holdout.json",
+      "role": "signed-native-graph-fixtures",
+      "format": "json",
+      "sha256": "d89af9e44ed69d5dccb05410be19795c07579762daf832c36238e3e598d22112",
+      "bytes": 287649
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-connected-tree/summary-primary.txt",
+      "role": "stdout",
+      "format": "txt",
+      "sha256": "826664d04afeaedf51fcd1a6d34a0cc837aba7bbbc8bbd701244c25f18fa6389",
+      "bytes": 652
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-connected-tree/summary-holdout.txt",
+      "role": "stdout",
+      "format": "txt",
+      "sha256": "22701f5d83219a01f6a0aca0754a857970cfa88dc77a6fbd3ef0fbbadfa947db",
+      "bytes": 651
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "count",
+        "name": "Exact labelled graph census versus analytic cut/path count",
+        "category": "independent",
+        "status": "passed",
+        "observed": 27,
+        "threshold": 27,
+        "unit": "graphs"
+      },
+      {
+        "check_id": "algebra",
+        "name": "Exact ordered ST remnant and mixed gauge cancellation",
+        "category": "physical",
+        "status": "passed",
+        "notes": "SymPy rational identities and external-current argument."
+      },
+      {
+        "check_id": "P3",
+        "name": "Full signed tree against unitary-gauge construction",
+        "category": "independent",
+        "status": "passed",
+        "observed": 4.485124108553149e-16,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical tolerance, not estimated physical uncertainty."
+      },
+      {
+        "check_id": "P4",
+        "name": "Physical total across five finite gauges",
+        "category": "physical",
+        "status": "passed",
+        "observed": 5.757766878666204e-17,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical tolerance, not estimated physical uncertainty."
+      },
+      {
+        "check_id": "P5",
+        "name": "Bose symmetry for labelled external Higgs",
+        "category": "physical",
+        "status": "passed",
+        "observed": 8.694409141350492e-17,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical tolerance, not estimated physical uncertainty."
+      },
+      {
+        "check_id": "P6",
+        "name": "External spinor, conservation and mass-shell checks",
+        "category": "physical",
+        "status": "passed",
+        "observed": 4.440892098500626e-15,
+        "threshold": 1e-09,
+        "unit": "max component",
+        "notes": "Numerical tolerance, not estimated physical uncertainty."
+      },
+      {
+        "check_id": "P7",
+        "name": "Bridge plus mixed vs independent unitary",
+        "category": "independent",
+        "status": "passed",
+        "observed": 4.1411010788050747e-16,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical tolerance, not estimated physical uncertainty."
+      },
+      {
+        "check_id": "P8",
+        "name": "Double near emissions vs independent unitary",
+        "category": "independent",
+        "status": "passed",
+        "observed": 9.025981458010488e-17,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical tolerance, not estimated physical uncertainty."
+      },
+      {
+        "check_id": "P9",
+        "name": "Virtual near Higgs splitting vs independent unitary",
+        "category": "independent",
+        "status": "passed",
+        "observed": 1.6662166293116497e-16,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical tolerance, not estimated physical uncertainty."
+      },
+      {
+        "check_id": "P10",
+        "name": "Deliberate omission of full mixed class",
+        "category": "regression",
+        "status": "passed",
+        "observed": 0.035690990752899485,
+        "threshold": 0.0001,
+        "unit": "scaled amplitude",
+        "notes": "Threshold is a lower bound; passed on each ensemble."
+      },
+      {
+        "check_id": "P11",
+        "name": "Deliberate omission of mixed Goldstone partners",
+        "category": "regression",
+        "status": "passed",
+        "observed": 0.008317405264711475,
+        "threshold": 0.0001,
+        "unit": "scaled amplitude",
+        "notes": "Threshold is a lower bound; passed on each ensemble."
+      }
+    ],
+    "report_path": "research-baselines/su2-sixpoint-connected-tree/validation_report.json"
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "88beb8ffbd806c961bed59216d361c25d21a0253cdda3f2cb29a118a0cc3644c",
+      "task_id": "20261123-su2-sixpoint-connected-tree",
+      "task_brief_path": "research/task_briefs/20261123-su2-sixpoint-connected-tree.md",
+      "task_brief_sha256": "21dd8711b9637122e1e1cac3cef86530ec9253c936ecad272b373043bc84a4b0",
+      "applied_profiles": [
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "rcrps-v1.0.1"
+      ],
+      "project_extensions": [
+        "AGENTS.md"
+      ]
+    },
+    "su2_scope": {
+      "fixture_blob": "d0077e7f41f8153d6b02f42ecc06f5a34ea1ee93",
+      "separate_draft_ref": "5ec052181b83d9b43f1ef4999a1b882538376f6b",
+      "reviewed_main_at_run": "45f69a6a7be4dfbe919a1cedd8a603891a153d17"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+seed=142023 accepted=8 rejected=27
+graph census {'bridge': 11, 'mixed': 8, 'double': 6, 'split': 2} Goldstone graphs 11
+physical_total_nonzero: 0.037798854598887106
+signed_total_vs_independent_unitary_scaled: 6.5828127535813145e-17
+physical_xi_variation_scaled: 1.7347234759768071e-17
+Bose_total_exchange_scaled: 6.1307199064165498e-17
+bridge_plus_mixed_vs_unitary_scaled: 6.4372033104218966e-17
+double_independent_signed_scaled: 3.3727576153316209e-17
+split_independent_signed_scaled: 2.9514404765755587e-17
+omit_mixed_nonzero_scaled: 0.0067629447985306955
+omit_mixed_chi_nonzero_scaled: 0.00094674045962945012
+external_checks: 4.4408920985006262e-15

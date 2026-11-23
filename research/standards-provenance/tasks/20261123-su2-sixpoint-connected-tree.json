@@ -1,0 +1,30 @@
+{
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "repository": "lm846802297-bit/off-shell-vector-polarization",
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "88beb8ffbd806c961bed59216d361c25d21a0253cdda3f2cb29a118a0cc3644c",
+  "task_id": "20261123-su2-sixpoint-connected-tree",
+  "task_brief_path": "research/task_briefs/20261123-su2-sixpoint-connected-tree.md",
+  "task_brief_sha256": "21dd8711b9637122e1e1cac3cef86530ec9253c936ecad272b373043bc84a4b0",
+  "applied_profiles": [
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "rcrps-v1.0.1"
+  ],
+  "project_extensions": [
+    {
+      "path": "AGENTS.md",
+      "scope": "Tree-level phase, gauge and provenance rules",
+      "sha256": "0aa425ea552f8479e945420668162b4e565dc4ff0f97aef2af25615fe7736642"
+    }
+  ],
+  "acceptance_criteria": [
+    "Exactly 27 labelled graphs without duplicates, matching independent symmetry/path count 11+8+6+2.",
+    "Signed full amplitude and gauge/Bose variations better than 1e-9 scaled on primary and holdout sets; removing either all mixed or just mixed-Goldstone terms produces residual above 1e-4 on both ensembles.",
+    "Claims apply only to fixed external components in the stated full connected tree. No inference for loops, other channels, complex poles or arbitrary currents."
+  ]
+}

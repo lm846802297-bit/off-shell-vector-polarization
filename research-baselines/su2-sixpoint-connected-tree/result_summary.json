@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "su2-neutral-six-point-tree-two-seeds",
+  "created_at": "2026-11-23T14:28:51Z",
+  "record_type": "result_summary",
+  "project": {
+    "repository": "lm846802297-bit/off-shell-vector-polarization",
+    "project_id": "off-shell-vector-polarization",
+    "workstream_id": "su2-tree-gauge-closure"
+  },
+  "calculation": "Complete connected 27-graph tree for the specified fixed-component neutral SU(2)-Higgs six-point process.",
+  "scope": {
+    "included": [
+      "analytic charge and bridge proof",
+      "full signed tree at five finite Rxi gauges",
+      "independently contracted unitary result"
+    ],
+    "excluded": [
+      "different external isospin/species",
+      "off-shell external states",
+      "loops",
+      "complex physical poles"
+    ]
+  },
+  "benchmark": {
+    "fixtures": 20,
+    "xi": [
+      0.43,
+      0.71,
+      1.0,
+      1.8,
+      2.65
+    ]
+  },
+  "observables": [
+    {
+      "name": "signed_total_vs_independent_unitary_scaled",
+      "value": 4.485124108553149e-16,
+      "unit": "scaled amplitude",
+      "status": "computed"
+    },
+    {
+      "name": "physical_xi_variation_scaled",
+      "value": 5.757766878666204e-17,
+      "unit": "scaled amplitude",
+      "status": "computed"
+    },
+    {
+      "name": "omit_mixed_nonzero_scaled",
+      "value": 0.035690990752899485,
+      "unit": "scaled amplitude",
+      "status": "computed"
+    },
+    {
+      "name": "omit_mixed_chi_nonzero_scaled",
+      "value": 0.008317405264711475,
+      "unit": "scaled amplitude",
+      "status": "computed"
+    }
+  ],
+  "data_files": [
+    {
+      "path": "research-baselines/su2-sixpoint-connected-tree/results-primary.json",
+      "role": "signed-native-graph-fixtures",
+      "format": "json",
+      "sha256": "6d16781fad9926e22895538f61908a9aa0737b78c24424c699e17b812d81e954",
+      "bytes": 202573
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-connected-tree/results-holdout.json",
+      "role": "signed-native-graph-fixtures",
+      "format": "json",
+      "sha256": "d89af9e44ed69d5dccb05410be19795c07579762daf832c36238e3e598d22112",
+      "bytes": 287649
+    }
+  ],
+  "scientific_status": "diagnostic",
+  "interpretation": "Full connected fixed-component on-shell-external tree is gauge independent. Omitting the mixed cancellation partners invalidates the check. No generalized off-shell or loop claim."
+}

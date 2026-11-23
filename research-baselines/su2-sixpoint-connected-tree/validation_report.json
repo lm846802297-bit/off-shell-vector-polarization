@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "su2-neutral-six-point-tree-two-seeds",
+  "created_at": "2026-11-23T14:28:51Z",
+  "record_type": "validation_report",
+  "status": "passed",
+  "checks": [
+    {
+      "check_id": "count",
+      "name": "Exact labelled graph census versus analytic cut/path count",
+      "category": "independent",
+      "status": "passed",
+      "observed": 27,
+      "threshold": 27,
+      "unit": "graphs"
+    },
+    {
+      "check_id": "algebra",
+      "name": "Exact ordered ST remnant and mixed gauge cancellation",
+      "category": "physical",
+      "status": "passed",
+      "notes": "SymPy rational identities and external-current argument."
+    },
+    {
+      "check_id": "P3",
+      "name": "Full signed tree against unitary-gauge construction",
+      "category": "independent",
+      "status": "passed",
+      "observed": 4.485124108553149e-16,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical tolerance, not estimated physical uncertainty."
+    },
+    {
+      "check_id": "P4",
+      "name": "Physical total across five finite gauges",
+      "category": "physical",
+      "status": "passed",
+      "observed": 5.757766878666204e-17,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical tolerance, not estimated physical uncertainty."
+    },
+    {
+      "check_id": "P5",
+      "name": "Bose symmetry for labelled external Higgs",
+      "category": "physical",
+      "status": "passed",
+      "observed": 8.694409141350492e-17,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical tolerance, not estimated physical uncertainty."
+    },
+    {
+      "check_id": "P6",
+      "name": "External spinor, conservation and mass-shell checks",
+      "category": "physical",
+      "status": "passed",
+      "observed": 4.440892098500626e-15,
+      "threshold": 1e-09,
+      "unit": "max component",
+      "notes": "Numerical tolerance, not estimated physical uncertainty."
+    },
+    {
+      "check_id": "P7",
+      "name": "Bridge plus mixed vs independent unitary",
+      "category": "independent",
+      "status": "passed",
+      "observed": 4.1411010788050747e-16,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical tolerance, not estimated physical uncertainty."
+    },
+    {
+      "check_id": "P8",
+      "name": "Double near emissions vs independent unitary",
+      "category": "independent",
+      "status": "passed",
+      "observed": 9.025981458010488e-17,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical tolerance, not estimated physical uncertainty."
+    },
+    {
+      "check_id": "P9",
+      "name": "Virtual near Higgs splitting vs independent unitary",
+      "category": "independent",
+      "status": "passed",
+      "observed": 1.6662166293116497e-16,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical tolerance, not estimated physical uncertainty."
+    },
+    {
+      "check_id": "P10",
+      "name": "Deliberate omission of full mixed class",
+      "category": "regression",
+      "status": "passed",
+      "observed": 0.035690990752899485,
+      "threshold": 0.0001,
+      "unit": "scaled amplitude",
+      "notes": "Threshold is a lower bound; passed on each ensemble."
+    },
+    {
+      "check_id": "P11",
+      "name": "Deliberate omission of mixed Goldstone partners",
+      "category": "regression",
+      "status": "passed",
+      "observed": 0.008317405264711475,
+      "threshold": 0.0001,
+      "unit": "scaled amplitude",
+      "notes": "Threshold is a lower bound; passed on each ensemble."
+    }
+  ]
+}
