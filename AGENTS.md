@@ -1,6 +1,6 @@
 # Off-Shell Vector Polarization — Repository Instructions
 
-Shared research governance, compute execution, task handoff, scientific-change tracking, quality gates, result archival, structured records, document review and Git integration are defined by the central research infrastructure repository and pinned in [research/standards-lock.yaml](research/standards-lock.yaml). Start from the [Central Research Standards Index](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/CENTRAL_STANDARDS_INDEX.md).
+Shared research governance, compute execution, task handoff, scientific-change tracking, quality gates, result archival, structured records, document review and Git integration are defined by the central research infrastructure repository and pinned in [research/standards-lock.yaml](research/standards-lock.yaml). Start from the [Central Research Standards Index](https://github.com/lm846802297-bit/high-energy-theory-research/blob/db503f0eb579bdbcac702e44237a6610c34690e7/docs/governance/CENTRAL_STANDARDS_INDEX.md).
 
 This repository remains authoritative for the physical definition of off-shell currents, gauge/BRST conventions, Slavnov–Taylor identities, factorization and recursion assumptions, complex-pole residues, spin decomposition, polarization density matrices, and project-specific physical acceptance criteria.
 
@@ -10,9 +10,15 @@ Before substantial work:
 
 1. Read this file, README.md, the remote synchronization record, and research/standards-lock.yaml.
 2. Read the pinned Central Research Standards Index.
-3. For a new derivation, amplitude calculation, symbolic/numerical run, parameter scan or multi-agent handoff, prepare a concise Research Task Brief using the [central Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_TASK_HANDOFF_STANDARD.md) and [template](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/templates/research-task-brief.md).
-4. Select the appropriate [central Research Quality Gate](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/RESEARCH_QUALITY_GATE.md) profile and define checks before the calculation.
+3. For a new derivation, amplitude calculation, symbolic/numerical run, parameter scan or multi-agent handoff, prepare a concise Research Task Brief using the [central Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/db503f0eb579bdbcac702e44237a6610c34690e7/docs/RESEARCH_TASK_HANDOFF_STANDARD.md) and [template](https://github.com/lm846802297-bit/high-energy-theory-research/blob/db503f0eb579bdbcac702e44237a6610c34690e7/templates/research-task-brief.md).
+4. Select the appropriate [central Research Quality Gate](https://github.com/lm846802297-bit/high-energy-theory-research/blob/db503f0eb579bdbcac702e44237a6610c34690e7/docs/governance/RESEARCH_QUALITY_GATE.md) profile and define checks before the calculation.
 5. Inspect the exact source revision, local snapshot/bundle, PRs, input manifests, native outputs and previous failure records before repeating work.
+
+
+
+## Task-level central standards provenance
+
+For every substantive task, create a machine-readable record at `research/standards-provenance/tasks/<task-id>.json` using the central Standards Adoption schema. Bind the exact standards-lock and finalized task-brief bytes by SHA-256; record the locked central commit, only the profiles actually applied, project-local extensions, and predeclared acceptance criteria. For numerical runs, repeat the same provenance in `run_manifest.extensions.standards_provenance`. The `.github/workflows/standards-adoption-validation.yml` workflow validates the lock and any task/run provenance records. A lock file alone does not prove task-level application.
 
 ## 2. Project-specific theory conventions
 
@@ -28,7 +34,7 @@ Before substantial work:
 
 ## 3. Computation, provenance and validation
 
-Follow the pinned central [Research Compute Policy](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/RESEARCH_COMPUTE_POLICY.md). For every substantive calculation preserve:
+Follow the pinned central [Research Compute Policy](https://github.com/lm846802297-bit/high-energy-theory-research/blob/db503f0eb579bdbcac702e44237a6610c34690e7/RESEARCH_COMPUTE_POLICY.md). For every substantive calculation preserve:
 
 1. Exact source commit SHA and clean/dirty tree state.
 2. SHA-256 hashes of source, inputs, fixtures and configuration files.
@@ -53,8 +59,8 @@ The current public remote repository is not yet a complete reproducibility relea
 
 ## 5. Git and reporting
 
-Follow the pinned central [Git merge policy](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/GIT_MERGE_POLICY.md). Substantive theory and research changes default to Create a merge commit.
+Follow the pinned central [Git merge policy](https://github.com/lm846802297-bit/high-energy-theory-research/blob/db503f0eb579bdbcac702e44237a6610c34690e7/docs/governance/GIT_MERGE_POLICY.md). Substantive theory and research changes default to Create a merge commit.
 
-Follow the central [Research Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_TASK_HANDOFF_STANDARD.md) and [Scientific Diff reporting standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/scientific-diff-workflow.md#11-research-reporting-and-communication-standard).
+Follow the central [Research Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/db503f0eb579bdbcac702e44237a6610c34690e7/docs/RESEARCH_TASK_HANDOFF_STANDARD.md) and [Scientific Diff reporting standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/db503f0eb579bdbcac702e44237a6610c34690e7/docs/scientific-diff-workflow.md#11-research-reporting-and-communication-standard).
 
 Report established algebraic identities, tested numerical regressions, physical validations and pending derivations separately. In particular, a projector identity regression or a cubic-vertex benchmark is not a completed five-point amplitude or a full five-point Slavnov–Taylor validation.
