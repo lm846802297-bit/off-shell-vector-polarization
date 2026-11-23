@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "run_manifest",
+  "run_id": "su2-single-higgs-radiation-two-seeds",
+  "created_at": "2026-11-23T12:26:05.834723594Z",
+  "project": {
+    "repository": "lm846802297-bit/off-shell-vector-polarization",
+    "project_id": "off-shell-vector-polarization",
+    "workstream_id": "su2-tree-gauge-closure"
+  },
+  "source": {
+    "commit_sha": "45f69a6a7be4dfbe919a1cedd8a603891a153d17",
+    "script_path": "research-baselines/su2-sixpoint-single-higgs-radiation/check_higgs_emission.py",
+    "script_sha256": "d05358a11f698dea04e34cf60b5017c42de3d6e6f131df8012f8855a941e62d2"
+  },
+  "inputs": [
+    {
+      "name": "pinned earlier exchange script",
+      "source": "lm846802297-bit/off-shell-vector-polarization",
+      "uri": "https://github.com/lm846802297-bit/off-shell-vector-polarization/blob/5ec052181b83d9b43f1ef4999a1b882538376f6b/research-baselines/su2-fivepoint-yukawa-source/check_yukawa_source.py",
+      "version": "5ec052181b83d9b43f1ef4999a1b882538376f6b",
+      "format": "python",
+      "bytes": 10041,
+      "sha256": "5cbc4e38401ae04615865b506c4cd4cbbf7ade6845b365ed333bc47684b18605",
+      "transformation": "Reuse of the verified bosonic Fourier action helper and fixture maker; direct ordered radiation newly implemented."
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "model": "SU(2) Higgs, massive chiral Yukawa source and distinguishable massless conserved vectorlike source",
+      "included": "one Higgs on massive line, one on bridge, both orderings and assignments",
+      "masses": "dimensionless model units drawn per recorded fixture"
+    },
+    "numerics": {
+      "dtype": "complex128",
+      "seed_primary": 122023,
+      "seed_holdout": 247069,
+      "fixture_counts": [
+        8,
+        12
+      ],
+      "xi": [
+        0.43,
+        1.0,
+        2.65
+      ],
+      "relative_acceptance": 1e-09,
+      "negative_control_threshold": "greater than 1e-4"
+    },
+    "conventions": {
+      "metric": "+---",
+      "momenta": "all incoming; signed final-state momenta",
+      "goldstone": "Lagrangian fixed relative phase from lower Higgs-doublet component"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "engine": "CPython",
+      "version": "3.12.14"
+    },
+    "dependencies": {
+      "numpy": "2.3.5",
+      "sympy": "1.14.0"
+    },
+    "hardware": {
+      "architecture": "x86_64",
+      "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "effective_process_affinity_cpus": 9,
+      "memory_bytes": 10451423232,
+      "note": "Visible execution runner resources, not a physical host claim."
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python research-baselines/su2-sixpoint-single-higgs-radiation/check_higgs_emission.py --seed 122023 --points 8 --output research-baselines/su2-sixpoint-single-higgs-radiation/results-primary.json > research-baselines/su2-sixpoint-single-higgs-radiation/summary-primary.txt && PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python research-baselines/su2-sixpoint-single-higgs-radiation/check_higgs_emission.py --seed 247069 --points 12 --output research-baselines/su2-sixpoint-single-higgs-radiation/results-holdout.json > research-baselines/su2-sixpoint-single-higgs-radiation/summary-holdout.txt",
+    "started_at": "2026-11-23T12:26:01.362303704Z",
+    "finished_at": "2026-11-23T12:26:05.834723594Z",
+    "exit_code": 0,
+    "wall_time_s": 4,
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "detached_commit",
+      "checkout_ref": null,
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null,
+      "working_tree_state": "dirty",
+      "dirty_paths": [
+        "research-baselines/su2-sixpoint-single-higgs-radiation/check_higgs_emission.py",
+        "research/task_briefs/20261123-su2-single-higgs-radiation.md"
+      ]
+    }
+  },
+  "outputs": [
+    {
+      "path": "research-baselines/su2-sixpoint-single-higgs-radiation/results-primary.json",
+      "role": "native-fixtures",
+      "format": "json",
+      "sha256": "03fa0a4072d4ed6a39c93769478c4ef87892413481fc72ffdc14ac5fe64d219a",
+      "bytes": 131075
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-single-higgs-radiation/results-holdout.json",
+      "role": "native-fixtures",
+      "format": "json",
+      "sha256": "9f9490f449fb33cc09f34bcf66b76dd15278a7e0b9de95a671139f3ae1ab0912",
+      "bytes": 195857
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-single-higgs-radiation/summary-primary.txt",
+      "role": "stdout",
+      "format": "txt",
+      "sha256": "b3da7ab1acb53897af2aaf2c0a04ea03baeb35e842e65f3cf69cbe755408f6fe",
+      "bytes": 920
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-single-higgs-radiation/summary-holdout.txt",
+      "role": "stdout",
+      "format": "txt",
+      "sha256": "bfac738d90a2aea88db0bafc37e196800d23ad1f79dc84e972c7b896a8288942",
+      "bytes": 923
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "P1",
+        "name": "Exact symbolic gauge variation",
+        "category": "analytic",
+        "status": "passed",
+        "observed": "zero",
+        "threshold": "identically zero"
+      },
+      {
+        "check_id": "P2",
+        "name": "Ordered new radiative-source Ward identity",
+        "category": "physical",
+        "status": "passed",
+        "observed": 5.978733960281817e-16,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude"
+      },
+      {
+        "check_id": "P3",
+        "name": "New ordered bare products versus reduced formula",
+        "category": "independent",
+        "status": "passed",
+        "observed": 5.3213897351696184e-17,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude"
+      },
+      {
+        "check_id": "P4",
+        "name": "Signed new and previous exchange gauge variation cancels",
+        "category": "independent",
+        "status": "passed",
+        "observed": 1.7137803725070883e-16,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude"
+      },
+      {
+        "check_id": "P5",
+        "name": "Omit one fermion ordering negative control",
+        "category": "regression",
+        "status": "passed",
+        "observed": 0.18830992348648584,
+        "threshold": 0.0001,
+        "unit": "scaled amplitude",
+        "notes": "Threshold is a lower bound on detectable nonzero effect."
+      },
+      {
+        "check_id": "P6",
+        "name": "Omit bridge Goldstone negative control",
+        "category": "regression",
+        "status": "passed",
+        "observed": 0.08871320115510012,
+        "threshold": 0.0001,
+        "unit": "scaled amplitude",
+        "notes": "Threshold is a lower bound on detectable nonzero effect."
+      }
+    ],
+    "report_path": "research-baselines/su2-sixpoint-single-higgs-radiation/validation_report.json"
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "88beb8ffbd806c961bed59216d361c25d21a0253cdda3f2cb29a118a0cc3644c",
+      "task_id": "20261123-su2-single-higgs-radiation",
+      "task_brief_path": "research/task_briefs/20261123-su2-single-higgs-radiation.md",
+      "task_brief_sha256": "373dcd316f30181915a25771e56c5eec4d2bf8977eee6daafc4af540285c7f54",
+      "applied_profiles": [
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "rcrps-v1.0.1"
+      ],
+      "project_extensions": [
+        "AGENTS.md"
+      ]
+    },
+    "su2_source": {
+      "prior_exchange_blob": "fb8f50a1379175c086a8c7899a358b50378f622a",
+      "prior_exchange_head": "5ec052181b83d9b43f1ef4999a1b882538376f6b",
+      "source_condition": "Exact detached project main plus explicitly hashed local research code; no remote archive or publication asserted."
+    }
+  }
+}

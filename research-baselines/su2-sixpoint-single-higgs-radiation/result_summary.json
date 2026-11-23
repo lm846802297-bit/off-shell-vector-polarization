@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "result_summary",
+  "run_id": "su2-single-higgs-radiation-two-seeds",
+  "created_at": "2026-11-23T12:26:05.834723594Z",
+  "project": {
+    "repository": "lm846802297-bit/off-shell-vector-polarization",
+    "project_id": "off-shell-vector-polarization",
+    "workstream_id": "su2-tree-gauge-closure"
+  },
+  "calculation": "One Higgs radiated on massive line, one on a W/chi bridge; comparison to matching prior gauge variation.",
+  "scope": {
+    "included": [
+      "two fermion positions; two Higgs assignments; W and Goldstone bridge"
+    ],
+    "excluded": [
+      "two-Higgs line emission",
+      "Yukawa h-to-hh splitting",
+      "full physical six-point closure",
+      "loops"
+    ]
+  },
+  "benchmark": {
+    "fixtures": 20,
+    "xi": [
+      0.43,
+      1.0,
+      2.65
+    ]
+  },
+  "observables": [
+    {
+      "name": "largest paired relative gauge variation",
+      "value": 1.7137803725070883e-16,
+      "unit": "scaled amplitude",
+      "status": "computed"
+    }
+  ],
+  "data_files": [
+    {
+      "path": "research-baselines/su2-sixpoint-single-higgs-radiation/results-primary.json",
+      "role": "native-fixtures",
+      "format": "json",
+      "sha256": "03fa0a4072d4ed6a39c93769478c4ef87892413481fc72ffdc14ac5fe64d219a",
+      "bytes": 131075
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-single-higgs-radiation/results-holdout.json",
+      "role": "native-fixtures",
+      "format": "json",
+      "sha256": "9f9490f449fb33cc09f34bcf66b76dd15278a7e0b9de95a671139f3ae1ab0912",
+      "bytes": 195857
+    }
+  ],
+  "scientific_status": "diagnostic",
+  "interpretation": "Exact cancellation holds only between the two specified sectors; no generic physical gauge-invariance claim."
+}

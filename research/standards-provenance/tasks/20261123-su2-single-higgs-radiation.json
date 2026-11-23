@@ -1,0 +1,30 @@
+{
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "repository": "lm846802297-bit/off-shell-vector-polarization",
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "88beb8ffbd806c961bed59216d361c25d21a0253cdda3f2cb29a118a0cc3644c",
+  "task_id": "20261123-su2-single-higgs-radiation",
+  "task_brief_path": "research/task_briefs/20261123-su2-single-higgs-radiation.md",
+  "task_brief_sha256": "373dcd316f30181915a25771e56c5eec4d2bf8977eee6daafc4af540285c7f54",
+  "applied_profiles": [
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "rcrps-v1.0.1"
+  ],
+  "project_extensions": [
+    {
+      "path": "AGENTS.md",
+      "scope": "Tree-level ST/gauge, source provenance and exact artifact integrity requirements",
+      "sha256": "0aa425ea552f8479e945420668162b4e565dc4ff0f97aef2af25615fe7736642"
+    }
+  ],
+  "acceptance_criteria": [
+    "Exact Ward endpoint algebra and two-class gauge variation cancellation for both Higgs assignments.",
+    "Primary and holdout fixtures: amplitude and Ward discrepancies at most 1e-9 in archived scaling.",
+    "Omit-one-order and omit-Goldstone negative controls exceed 1e-4; no full six-point claim."
+  ]
+}

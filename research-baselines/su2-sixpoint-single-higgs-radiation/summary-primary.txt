@@ -1,0 +1,20 @@
+{
+  "accepted": 8,
+  "rejected": 1,
+  "seed": 122023,
+  "maxima": {
+    "on_shell_and_source_ward": 2.942091015256665e-15,
+    "external_dirac_equations": 1.1443916996305594e-15,
+    "far_vertex_ward_and_action": 1.7772239894833365e-15,
+    "both_ordered_near_source_operators": 1.5515838457795457e-17,
+    "radiative_source_ward_identity_scaled": 4.471281307293777e-16,
+    "endpoint_separate_residues_scaled": 3.342213888644167e-16,
+    "direct_product_vs_factorized_scaled": 2.7755575615628914e-17,
+    "new_gauge_variation_vs_exact_scaled": 8.121767085755589e-17,
+    "prior_targeted_gauge_variation_vs_exact_scaled": 5.551115123125783e-17,
+    "combined_paired_gauge_variation_scaled": 8.326672684688674e-17,
+    "nonzero_separate_variation_scaled": 0.23354595386748717,
+    "nonzero_omitting_one_fermion_order_scaled": 0.18830992348648584,
+    "nonzero_omitting_Goldstone_bridge_scaled": 0.08871320115510012
+  }
+}

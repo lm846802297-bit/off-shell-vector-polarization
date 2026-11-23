@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "validation_report",
+  "run_id": "su2-single-higgs-radiation-two-seeds",
+  "created_at": "2026-11-23T12:26:05.834723594Z",
+  "status": "passed",
+  "checks": [
+    {
+      "check_id": "P1",
+      "name": "Exact symbolic gauge variation",
+      "category": "analytic",
+      "status": "passed",
+      "observed": "zero",
+      "threshold": "identically zero"
+    },
+    {
+      "check_id": "P2",
+      "name": "Ordered new radiative-source Ward identity",
+      "category": "physical",
+      "status": "passed",
+      "observed": 5.978733960281817e-16,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude"
+    },
+    {
+      "check_id": "P3",
+      "name": "New ordered bare products versus reduced formula",
+      "category": "independent",
+      "status": "passed",
+      "observed": 5.3213897351696184e-17,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude"
+    },
+    {
+      "check_id": "P4",
+      "name": "Signed new and previous exchange gauge variation cancels",
+      "category": "independent",
+      "status": "passed",
+      "observed": 1.7137803725070883e-16,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude"
+    },
+    {
+      "check_id": "P5",
+      "name": "Omit one fermion ordering negative control",
+      "category": "regression",
+      "status": "passed",
+      "observed": 0.18830992348648584,
+      "threshold": 0.0001,
+      "unit": "scaled amplitude",
+      "notes": "Threshold is a lower bound on detectable nonzero effect."
+    },
+    {
+      "check_id": "P6",
+      "name": "Omit bridge Goldstone negative control",
+      "category": "regression",
+      "status": "passed",
+      "observed": 0.08871320115510012,
+      "threshold": 0.0001,
+      "unit": "scaled amplitude",
+      "notes": "Threshold is a lower bound on detectable nonzero effect."
+    }
+  ]
+}
