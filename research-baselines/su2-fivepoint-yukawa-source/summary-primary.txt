@@ -1,0 +1,20 @@
+{
+  "accepted": 8,
+  "rejected": 1,
+  "seed": 112023,
+  "maxima": {
+    "spinor_mass_shell_and_current_conservation": 3.219646771412954e-15,
+    "spinor_dirac_equations": 7.281541826356601e-16,
+    "source_signed_Ward_residual": 7.696856831808123e-16,
+    "nonzero_massive_source_divergence": 0.5214996051258144,
+    "right_ST_relation_scaled": 1.3119282523350696e-15,
+    "inner_residual_formula_scaled": 1.5823112613210482e-16,
+    "nonzero_inner_residual_scaled": 0.18921064367777027,
+    "root_gauges_scaled": 2.3396429739281907e-16,
+    "same_gauge_root_pair_scaled": 2.1138016631127878e-16,
+    "nonzero_root_Wonly_residue_scaled": 4.278702816746521,
+    "near_root_full_scaled": 8.377442476453028e-09,
+    "root_split_residue_formula_scaled": 2.804312906937203e-09,
+    "root_total_residue_scaled": 5.662409532536366e-15
+  }
+}
