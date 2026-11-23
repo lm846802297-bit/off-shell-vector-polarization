@@ -1,0 +1,33 @@
+lock_version: 1
+
+central_repository: lm846802297-bit/high-energy-theory-research
+standards_release: null
+source_commit: "142267bc803c90aa681110293b66b73947bbcaa1"
+
+adopted_at: "2026-11-23"
+adoption_pr: "https://github.com/lm846802297-bit/off-shell-vector-polarization/pull/2"
+
+adopted_profiles:
+  - core-governance
+  - research-compute
+  - task-handoff
+  - scientific-diff
+  - research-quality-gate
+  - calculation-result-archive
+  - rcrps-v1.0.1
+  - git-review-and-merge
+  - document-review
+
+local_extensions:
+  - path: "README.md"
+    scope: "Off-shell current research scope and reproducibility/synchronization status"
+  - path: "research-baselines/"
+    scope: "SU(2)-Higgs theory baseline, five-point current derivations, projector identities, off-shell ambiguity and preserved historical failures"
+  - path: "provenance/"
+    scope: "Original local snapshot identity, source/input SHA-256 manifests, native outputs, runtime records and synchronization evidence"
+  - path: "tests/"
+    scope: "Symbolic projector identities, numerical algebraic regressions, BRST/Slavnov-Taylor checks and physics-specific validation"
+  - path: "docs/"
+    scope: "Off-shell vector current, pole-residue, polarization-density-matrix and literature-specific research records"
+
+deviations: []
