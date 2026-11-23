@@ -1,0 +1,28 @@
+{
+  "script": "scripts/verify_projector_identities.py",
+  "sympy_version": "1.14.0",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "definitions": {
+    "Delta": "q^2 - m^2",
+    "d": "q.n",
+    "eta": "m^2 n/(2 q.n)",
+    "ell": "q/m - m n/(q.n)"
+  },
+  "expected_identities": {
+    "q_mu_PiT_mu_nu": "Delta*n^nu/(q.n)",
+    "q_mu_PiL_mu_nu": "Delta*(q^nu/m^2 - n^nu/(q.n))",
+    "q_dot_ell": "Delta/m",
+    "ell_squared": "-1 + Delta/m^2",
+    "PiT_plus_PiL": "-g^{mu nu} + q^mu q^nu/m^2"
+  },
+  "checks": {
+    "PiT_plus_PiL_equals_unitary_numerator": true,
+    "q_contract_PiT": true,
+    "q_contract_PiL": true,
+    "q_dot_ell": true,
+    "ell_squared": true,
+    "sum_identity_with_d_qn": true
+  },
+  "all_pass": true
+}

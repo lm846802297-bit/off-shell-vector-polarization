@@ -1,0 +1,36 @@
+- key: ke_liu_mahbub_2026
+  title: Off-shell continuation from on-shell recursion
+  authors: [Wenqi Ke, Zhen Liu, Ishmam Mahbub]
+  version: arXiv:2611.13096v1
+  date: 2026-11-09
+  url: https://arxiv.org/abs/2611.13096
+  pdf_url: https://arxiv.org/pdf/2611.13096
+  relevant_locations:
+    - Eq. (2.12)-(2.13), PDF p. 6
+    - Eqs. (3.10)-(3.16), PDF pp. 10-11
+    - Eqs. (4.20)-(4.21), PDF pp. 19-20
+    - Appendix C.3, Eq. (C.17), PDF p. 30
+  local_pdf_sha256: unavailable_in_initial_snapshot
+  note: The PDF was reviewed through an indexed full-text rendering; no local PDF binary is included.
+- key: denner_pelliccioli_2020
+  title: Polarized electroweak bosons in W+W- production at the LHC including NLO QCD effects
+  authors: [Ansgar Denner, Giovanni Pelliccioli]
+  doi: 10.1007/JHEP09(2020)164
+  arxiv: 2006.14867
+  url: https://doi.org/10.1007/JHEP09(2020)164
+- key: lewandowski_2018
+  title: LSZ-reduction, resonances and non-diagonal propagators: gauge fields
+  authors: [Adrian Lewandowski]
+  arxiv: 1803.11434
+  url: https://arxiv.org/abs/1803.11434
+- key: grassi_kniehl_sirlin_2002
+  title: Width and Partial Widths of Unstable Particles in the Light of the Nielsen Identities
+  authors: [Pietro A. Grassi, Bernd A. Kniehl, Alberto Sirlin]
+  doi: 10.1103/PhysRevD.65.085001
+  arxiv: hep-ph/0109228
+  url: https://doi.org/10.1103/PhysRevD.65.085001
+- key: del_gratta_et_al_2026_tomography_limitations
+  title: Limitations of quantum tomography in Higgs-boson decays to four leptons
+  authors: [Morgan Del Gratta, Fabio Maltoni, Davide Pagani, Giovanni Pelliccioli]
+  arxiv: 2609.25217v1
+  url: https://arxiv.org/abs/2609.25217

@@ -1,0 +1,16 @@
+model: minimal_su2_yang_mills_higgs
+metric: mostly_minus
+metric_tensor: diag(1,-1,-1,-1)
+gauge_group: SU(2)
+gauge_coupling: g
+scalar_doublets: 1
+scalar_vev: v
+vector_mass_relation: m = g*v/2
+higgs_mass_relation: m_h^2 = 2*lambda*v^2
+fermion_sector: optional vectorlike Dirac doublet
+fermion_yukawa: 0 for massless-fermion benchmark
+gauge_fixing: R_xi
+gauge_fixing_function: F^a = partial_mu W^{a mu} - xi*m*chi^a
+massless_limit: m_i = tau*mbar_i, tau -> 0 at fixed mass ratios
+perturbative_order: tree level
+kinematics: generic hard kinematics; soft/collinear limits excluded from first benchmark

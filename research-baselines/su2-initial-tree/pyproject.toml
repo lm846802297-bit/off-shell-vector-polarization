@@ -1,0 +1,9 @@
+[project]
+name = "off-shell-vector-polarization"
+version = "0.1.0"
+description = "Research notes and symbolic checks for gauge-invariant off-shell vector polarization"
+requires-python = ">=3.10"
+dependencies = ["sympy>=1.12", "numpy>=2.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

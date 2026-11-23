@@ -1,0 +1,20 @@
+{
+  "script": "scripts/verify_offshell_ambiguity.py",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "definitions": {
+    "D": "q^2 - m^2",
+    "Jprime": "J + D*K",
+    "exchange": "J_L*N*J_R/D"
+  },
+  "exchange_difference": "N*(D*KL*KR + JL*KR + JR*KL)",
+  "pole_residue_difference": "0",
+  "current_identity_shift": "-D*(Kchi*m - qK)",
+  "checks": {
+    "exchange_difference_is_regular": true,
+    "pole_residue_unchanged": true,
+    "current_identity_shift_is_proportional_to_D": true
+  },
+  "all_pass": true,
+  "scope_warning": "This verifies the algebraic ambiguity; it does not classify all allowed K structures in the five-point SU(2)-Higgs current."
+}
