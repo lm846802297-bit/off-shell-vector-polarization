@@ -1,0 +1,18 @@
+{
+  "accepted": 12,
+  "rejected": 15,
+  "seed": 287431,
+  "maxima": {
+    "normalization_and_shift_constraints": 1.5543122344752192e-15,
+    "residue_ST_difference_scaled": 7.144389742564295e-14,
+    "unphysical_pole_formula_scaled": 6.203592635746918e-14,
+    "nonzero_unphysical_pole_raw": 261.65092464483945,
+    "finite_ST_scaled": 6.336057489067082e-15,
+    "boundary_vs_formula_scaled": 7.339192506414029e-14,
+    "different_outer_contours_scaled": 1.4010039097172383e-13,
+    "boundary_necessary_for_reconstruction_scaled": 1.000000000000705,
+    "reconstruction_with_boundary_scaled": 8.841873926870725e-13,
+    "shifted_ST_scaled": 1.6846727173897479e-13,
+    "shifted_mass_shell_scaled": 1.3669485614986227e-13
+  }
+}

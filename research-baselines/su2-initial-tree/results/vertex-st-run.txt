@@ -1,0 +1,16 @@
+{
+  "script": "scripts/verify_vertex_st_identity.py",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "assumptions": [
+    "q+k+r=0",
+    "k.j=0",
+    "Goldstone phase chosen to match q.J=m*J_chi"
+  ],
+  "identity": "m*(g/2)*(q-r).j = g*m*q.j",
+  "residual_before_current_conservation": "g*m*(j0*k0 - j1*k1 - j2*k2 - j3*k3)/2",
+  "coefficient_of_k_dot_j": "g*m/2",
+  "residual_after_assumptions": "0",
+  "pass": true,
+  "scope_warning": "This checks one local cubic-vertex contraction only; it is not a complete five-point amplitude or a proof of the on-shell-recursive current identity."
+}

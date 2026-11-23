@@ -1,0 +1,23 @@
+{
+  "accepted": 24,
+  "minimum": {
+    "propagator_gap": 0.37093551017946946,
+    "root_offshell_gap": 0.27873543280843927
+  },
+  "maxima": {
+    "mass_and_conservation": 1.942890293094024e-15,
+    "polarization_orthogonality": 1.1102230246251565e-16,
+    "polarization_completeness": 4.440892098500626e-16,
+    "left_current_conservation": 9.402201239794294e-16,
+    "per_graph_action_vs_closed_form_scaled": 1.6653345369377348e-15,
+    "contracted_st_scaled": 1.7171000687215399e-15,
+    "channel_0_regular_scaled": 1.0637940417108529e-15,
+    "channel_1_regular_scaled": 1.1102230246251565e-15,
+    "higgs_st_scaled": 6.661338147750939e-16,
+    "omit_vector_quartic_control_scaled": 1.000000000000001,
+    "omit_chi_exchange_from_goldstone_current_control_scaled": 0.6136781847649706,
+    "nonzero_spin_summed_vector_residue": 39.78951900159122,
+    "spin_summed_identity_scaled": 4.4213600427612046e-15,
+    "spin_summed_residual_scaled": 1.780522411253146e-29
+  }
+}

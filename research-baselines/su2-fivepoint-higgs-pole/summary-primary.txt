@@ -1,0 +1,26 @@
+{
+  "accepted": 16,
+  "rejected": 1,
+  "q_squared_range": [
+    -9.060700717584849,
+    17.021429231693556
+  ],
+  "minimum": {
+    "K_propagator_gap": 0.18105777929166886,
+    "root_offshell_gap": 0.5344552772759708
+  },
+  "maxima": {
+    "external_mass_shell": 1.0104410956514702e-15,
+    "nonzero_scalar_complex_kinematics": 1.174758163096975,
+    "projected_current_conserves": 4.242156220644677e-15,
+    "deformed_mass_shell_and_pole": 9.853229343548264e-16,
+    "direct_contour_vs_factorization_scaled": 9.583197381910276e-14,
+    "different_contour_radius_and_order_scaled": 9.679476539673908e-14,
+    "unprojected_delta_vs_slashK_scaled": 9.129182209999534e-16,
+    "nonzero_unprojected_delta_scaled": 0.7558712767681287,
+    "projected_delta_scaled": 1.2417954155627438e-14,
+    "projected_gauge_variation_scaled": 3.511935456990081e-14,
+    "nonzero_projected_signal": 36.56415220503279,
+    "wrong_phase_control_scaled": 2.000000000000004
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "script": "scripts/numeric_projector_scan.py",
+  "seed": 20261123,
+  "samples": 1000,
+  "threshold": 5e-11,
+  "min_abs_q_dot_n": 0.050026006882127196,
+  "max_abs_residuals": {
+    "projector_sum": 4.904861239385383e-13,
+    "transverse_contraction": 7.797536173251141,
+    "longitudinal_contraction": 2.8421709430404007e-13,
+    "longitudinal_vector_norm_and_contraction": 8.251177519014163e-13
+  },
+  "checks": {
+    "projector_sum": true,
+    "transverse_contraction": false,
+    "longitudinal_contraction": true,
+    "longitudinal_vector_norm_and_contraction": true
+  },
+  "all_pass": false,
+  "numpy_version": "2.3.5",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}

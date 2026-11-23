@@ -1,0 +1,240 @@
+{
+  "algorithm": "SHA-256",
+  "origin_git_commit": "a48377c055ce4929d67c4d996ab16f844458eb7a",
+  "origin_tracked_files": 48,
+  "retained_unchanged": 35,
+  "omitted_or_replaced_from_origin": {
+    ".github/workflows/ci.yml": "Archived CI configuration deliberately not imported.",
+    "CONTRIBUTING.md": "Repository-wide contribution policy, not nested research content.",
+    "README.md": "Replaced with a standalone baseline-specific README.",
+    "docs/STATUS.md": "Historical synchronization state and links to omitted records; existing root status is unchanged.",
+    "environment/revalidation-runtime.json": "Runtime records and original scope manifest withheld; transient identifiers are not required for replay.",
+    "environment/revalidation-runtime.txt": "Runtime records and original scope manifest withheld; transient identifiers are not required for replay.",
+    "environment/runtime-snapshot.txt": "Runtime records and original scope manifest withheld; transient identifiers are not required for replay.",
+    "environment/runtime.json": "Runtime records and original scope manifest withheld; transient identifiers are not required for replay.",
+    "environment/sha256-manifest.json": "Runtime records and original scope manifest withheld; transient identifiers are not required for replay.",
+    "provenance/PR_DESCRIPTION.md": "Repository-level review metadata retained separately on the draft branch.",
+    "provenance/remote-sync.md": "Draft already retains its more current synchronization provenance.",
+    "provenance/revalidation-run-manifest.json": "Internal path and links to excluded runtime files.",
+    "provenance/run-manifest.json": "Original provenance superseded for this derivative by the separate nested manifest."
+  },
+  "public_manifest_excludes_itself": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 68,
+      "sha256": "283b827d8fd0eb4220fb3cac51d573a6998d653d767577f1031e78cf55eeb0d1",
+      "source_git_blob": "29184c3fc943d86d5da4084b95114bd484694f06"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2136,
+      "sha256": "9cac8602326dcb32e92e1a735470a014e925c05f62373a82fd6564a3e8c3e362",
+      "source_git_blob": null
+    },
+    {
+      "path": "data/model_parameters.yaml",
+      "bytes": 597,
+      "sha256": "43aec3173df7401a4847f5203e08754618692245197af4d15bd0757e8e4dc638",
+      "source_git_blob": "222ecdb2b0174aebc95a408e2b330e6487acd3b7"
+    },
+    {
+      "path": "docs/derivations/five-point-current.md",
+      "bytes": 8319,
+      "sha256": "bf45a99e4e17e647560d68d379afb1438fa70f3dbcab59622350aa78962bb870",
+      "source_git_blob": "cddbba9eab9b937a6d1577a5e8684c5aa83d6139"
+    },
+    {
+      "path": "docs/derivations/off-shell-ambiguity.md",
+      "bytes": 3872,
+      "sha256": "c0b129db574c77b0c2bb245ed442b024d8b1aa9ac2af84587c6d5825b5161392",
+      "source_git_blob": "4f7f80019b5c01d8072a8c7fe54b48c1f55e27f0"
+    },
+    {
+      "path": "docs/derivations/off-shell-projector-identities.md",
+      "bytes": 1562,
+      "sha256": "4f62bc1a700887de12635bc12731058f19d35152c2680060ac76302baa3ae1b1",
+      "source_git_blob": "e288ac5bc7dd96f22b57c312f7c1bf752f81225b"
+    },
+    {
+      "path": "docs/derivations/st-identity-functional-derivation.md",
+      "bytes": 2497,
+      "sha256": "989381e17fdbd105198b517ea14955f5aa137b7f865474f1367f516b53382bcf",
+      "source_git_blob": "44625a16c603019b65632cf967fb48100cc67380"
+    },
+    {
+      "path": "docs/literature/ke-liu-mahbub-2026.md",
+      "bytes": 3092,
+      "sha256": "2f73968436edc0e1cd96d4065aed98e7cb084d5b464b3fbbecc29cf57507dca5",
+      "source_git_blob": "f74e12d04ba99d47fc8ac681e8f5a6a158f6f376"
+    },
+    {
+      "path": "docs/literature/related-work.md",
+      "bytes": 1560,
+      "sha256": "9971147ad10ea0e416a3532930d1e5124af4f94c6205ec97d9755c1835867ed4",
+      "source_git_blob": "0cceaf543bc762d662cf357870c8816e6ebdf9cd"
+    },
+    {
+      "path": "docs/model/minimal-su2-yang-mills-higgs.md",
+      "bytes": 2228,
+      "sha256": "9e697a97fddc46f39d360539d2463729a222c1b657a1501d4296e3f570a47086",
+      "source_git_blob": "0044efdcefad37a406497a8cde379091d117c25d"
+    },
+    {
+      "path": "docs/roadmap/milestones.md",
+      "bytes": 2750,
+      "sha256": "5fc8742079f84c84e146b243eb05b71b4c903303e64c675f924edd9b3574fc19",
+      "source_git_blob": "973465baed88931a5b549663e917d077fb3af059"
+    },
+    {
+      "path": "provenance/source-snapshots/numeric_projector_scan_mixed_index_convention.py",
+      "bytes": 2772,
+      "sha256": "bc93699339bee295f542a5e85fb8c1cbefc3827ba48956801073d38480137130",
+      "source_git_blob": "270ec395a24a8cd01fb6537ab6cfc303b4aa8c8c"
+    },
+    {
+      "path": "provenance/source-snapshots/verify_projector_identities_mixed_index_convention.py",
+      "bytes": 3986,
+      "sha256": "e09108b572d053f301f1c2a839aa3329a06ccd8da43e28b816f4180884061dac",
+      "source_git_blob": "9236c7c7c590109dcc36f687eddf10102f0ea162"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 289,
+      "sha256": "67df1968c5ac64dad26f91810fa09df43b66340f108da3548e23159f37c452b0",
+      "source_git_blob": "012d4500c9abd9d6d3f6588973c47c949c6841e5"
+    },
+    {
+      "path": "references/README.md",
+      "bytes": 379,
+      "sha256": "46d47321b4164c597d4944b79f02e3f66d7642803e7fe1a414b8aa5744b38f48",
+      "source_git_blob": "bb0917f145c811531093a14d3c90d7397552de37"
+    },
+    {
+      "path": "references/sources.yaml",
+      "bytes": 1637,
+      "sha256": "f55d070b775b67872c1d07f9c689271119d22c2f8bd6fde3fae3d7386a65af8d",
+      "source_git_blob": "576abb5c5b421828e6858978e5dd870721a984c6"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 23,
+      "sha256": "7c4d104c2180478c13b961b99cdde05852badb0a8eebacaea2d273b4f939bb51",
+      "source_git_blob": "58cbd33b9cfa3c92cf4d86b96dad44ff511fe74a"
+    },
+    {
+      "path": "results/failures/README.md",
+      "bytes": 729,
+      "sha256": "ff417f425d7f9f6d4d84bf538a87eed5f1e53b591cbd6edd09fae2a98c1ffb78",
+      "source_git_blob": "0a58b20dd1d9ed81af3638cfffc28fae5c143c53"
+    },
+    {
+      "path": "results/failures/projector_numeric_scan_mixed_index_convention_failure.json",
+      "bytes": 754,
+      "sha256": "7dff75da328042a0ddebb76c9877fe298451204e4c74f85b852af57e97fca580",
+      "source_git_blob": "1a8e5203e5be42f0bb5aaf8146e761901c6c9374"
+    },
+    {
+      "path": "results/history_projector_identities_mixed_index_convention.json",
+      "bytes": 807,
+      "sha256": "a764c73f4764cf8ec63cfd748c1348dd91bb1b2af9081a4d1de4e39b16dce8b0",
+      "source_git_blob": "9aeb9e87a20ef86953e4166bd56f6b773b0f7705"
+    },
+    {
+      "path": "results/off-shell-ambiguity-run.txt",
+      "bytes": 741,
+      "sha256": "c1a7599cff5d78918c9011a6abcf324796c7990016875f31f3f6cd57d1047f68",
+      "source_git_blob": "0f268676ac53d011032b8b6e8c64cf572e54e92c"
+    },
+    {
+      "path": "results/off_shell_ambiguity.json",
+      "bytes": 741,
+      "sha256": "c1a7599cff5d78918c9011a6abcf324796c7990016875f31f3f6cd57d1047f68",
+      "source_git_blob": "0f268676ac53d011032b8b6e8c64cf572e54e92c"
+    },
+    {
+      "path": "results/projector-numeric-run.txt",
+      "bytes": 1608,
+      "sha256": "d0f521084acc546a6006d48b6298d1d2b7ae33c30bc67e135af410ae552c82a1",
+      "source_git_blob": "6245b77f08f77424865853d247829ab0753bb4b5"
+    },
+    {
+      "path": "results/projector-symbolic-run.txt",
+      "bytes": 807,
+      "sha256": "a764c73f4764cf8ec63cfd748c1348dd91bb1b2af9081a4d1de4e39b16dce8b0",
+      "source_git_blob": "9aeb9e87a20ef86953e4166bd56f6b773b0f7705"
+    },
+    {
+      "path": "results/projector_identities.json",
+      "bytes": 807,
+      "sha256": "a764c73f4764cf8ec63cfd748c1348dd91bb1b2af9081a4d1de4e39b16dce8b0",
+      "source_git_blob": "9aeb9e87a20ef86953e4166bd56f6b773b0f7705"
+    },
+    {
+      "path": "results/projector_numeric_scan.json",
+      "bytes": 1608,
+      "sha256": "d0f521084acc546a6006d48b6298d1d2b7ae33c30bc67e135af410ae552c82a1",
+      "source_git_blob": "6245b77f08f77424865853d247829ab0753bb4b5"
+    },
+    {
+      "path": "results/revalidation-2026-11-23.log",
+      "bytes": 8540,
+      "sha256": "e4c595cb807c3ba44ec5a3e1cce0d2c80dd510a8996bf2cb15859c7d61e225b8",
+      "source_git_blob": "91c43c20c74439e9a40c0ddd2afefe16b7b61b09"
+    },
+    {
+      "path": "results/test-run.txt",
+      "bytes": 4309,
+      "sha256": "d37cf488b00678e33300ae1c87bd55fa3323bc199cffa8f35842c34f97a9972c",
+      "source_git_blob": "1117a64947e0081ce67e1d439197507f16da4a97"
+    },
+    {
+      "path": "results/verification-summary.md",
+      "bytes": 793,
+      "sha256": "5f2c85d40ccf8554dde6693ffe180e2d7d2a584edea760ce5b6f4aa2aa6bbb30",
+      "source_git_blob": "257b402e4f7f4c03e0d3f43bee4d2d0886abd517"
+    },
+    {
+      "path": "results/vertex-st-run.txt",
+      "bytes": 671,
+      "sha256": "368f5b82e8d07cb539b278535b7f69fe1a7e7c932397429af0a73b0a9ad4491a",
+      "source_git_blob": "d5d4fc6b9dd5036bcda928be6fc6e794b6b8b496"
+    },
+    {
+      "path": "results/vertex_st_identity.json",
+      "bytes": 671,
+      "sha256": "368f5b82e8d07cb539b278535b7f69fe1a7e7c932397429af0a73b0a9ad4491a",
+      "source_git_blob": "d5d4fc6b9dd5036bcda928be6fc6e794b6b8b496"
+    },
+    {
+      "path": "scripts/numeric_projector_scan.py",
+      "bytes": 3203,
+      "sha256": "ac8f23b05dda96a51b2d1f792a130d6da7390ac18b123fb83654b4e53578a827",
+      "source_git_blob": "b0927de85ba22e57f3650e31ade1d64a1461b76c"
+    },
+    {
+      "path": "scripts/verify_offshell_ambiguity.py",
+      "bytes": 1797,
+      "sha256": "842f8fb255dabea2356cb6acd64c29ee0cc571e00ef72d0d82cc6f7d4aba5277",
+      "source_git_blob": "f84970b80b1ce929f1298ddcab509e3668d60b4f"
+    },
+    {
+      "path": "scripts/verify_projector_identities.py",
+      "bytes": 3888,
+      "sha256": "16a8f88a02f1329d68188183d0ad406b552e41f3514fe43ca65e341188aafef4",
+      "source_git_blob": "7d0ddc09367fdf80cd637ecb1c35f557aeb35834"
+    },
+    {
+      "path": "scripts/verify_vertex_st_identity.py",
+      "bytes": 2664,
+      "sha256": "56aa4a89216d42bf23df650531badc5070eb8498b8e1c0cff1bb8d571630403a",
+      "source_git_blob": "2270b905e6205f7843091ce4812983380bbb7c7e"
+    },
+    {
+      "path": "tests/test_symbolic_checks.py",
+      "bytes": 1513,
+      "sha256": "0c61cc530da9223bc006a07a3ec0fc7dcc2d1326dfe799299b5efc07da68ebe6",
+      "source_git_blob": "7dbcfb5a7e2dc85e37f500c4ade12a8c21293e72"
+    }
+  ]
+}

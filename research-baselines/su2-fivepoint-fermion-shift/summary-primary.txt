@@ -1,0 +1,22 @@
+{
+  "seed": 82023,
+  "accepted": 8,
+  "rejected": 10,
+  "minimum": {
+    "fixed_denominator": 0.2983035350385136
+  },
+  "maxima": {
+    "mass_momentum_conservation_and_spinor_equations": 4.965068306494546e-16,
+    "current_conservation": 9.930136612989092e-16,
+    "two_component_vs_dirac_current": 7.021666937153402e-16,
+    "finite_ST_scaled": 2.069258110368264e-15,
+    "direct_vs_closed_scaled": 3.2250044035274138e-15,
+    "gauge_change_vs_closed_scaled": 2.285548653568239e-15,
+    "nonzero_gauge_change_scaled": 1.3949832358570802,
+    "circle_modes_vs_polynomial_scaled": 5.436939756146143e-16,
+    "forbidden_fourier_modes_scaled": 1.436910227019644e-14,
+    "flat_current_nonzero_modes_scaled": 3.435540158766037e-18,
+    "quadratic_minus_flat_link_scaled": 2.4609596619192976e-16,
+    "nonzero_quadratic_signal_scaled": 0.9214354175007694
+  }
+}

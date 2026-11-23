@@ -1,0 +1,18 @@
+{
+  "accepted": 8,
+  "rejected": 5,
+  "seed": 102023,
+  "maxima": {
+    "physical_sources_on_shell_and_transverse": 7.127968128261461e-15,
+    "internal_exchange_vs_closed_scaled": 2.06083980778777e-15,
+    "missing_chi_negative_control_scaled": 1.9283130784624654,
+    "unconserved_internal_gauge_formula_scaled": 1.2140846006232717e-15,
+    "unconserved_internal_negative_control_scaled": 3.0321161773101393,
+    "independent_outer_gauges_scaled": 2.652432450721805e-16,
+    "root_raw_roundoff_diagnostic": 8.436574139999694e-07,
+    "conserved_root_pole_probe_scaled": 1.704694214057094e-10,
+    "unconserved_root_residue_vs_exact_scaled": 2.0926705405531087e-08,
+    "unconserved_root_pole_negative_control_scaled": 270.9712116068457,
+    "sewn_physical_pole_numerator": 1.2629784560405528e-14
+  }
+}

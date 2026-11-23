@@ -1,0 +1,121 @@
+test_numeric_projector_scan (test_symbolic_checks.SymbolicChecks.test_numeric_projector_scan) ... {
+  "script": "scripts/numeric_projector_scan.py",
+  "seed": 20261123,
+  "samples": 10000,
+  "sample_counts": [
+    100,
+    1000,
+    10000
+  ],
+  "threshold": 5e-11,
+  "max_residual_by_sample_count": {
+    "100": {
+      "projector_sum": 3.6703973194107675e-13,
+      "transverse_contraction": 1.7053025658242404e-13,
+      "longitudinal_contraction": 2.8421709430404007e-13,
+      "longitudinal_vector_norm_and_contraction": 4.707345624410664e-13
+    },
+    "1000": {
+      "projector_sum": 4.904861239385383e-13,
+      "transverse_contraction": 3.410605131648481e-13,
+      "longitudinal_contraction": 2.8421709430404007e-13,
+      "longitudinal_vector_norm_and_contraction": 8.251177519014163e-13
+    },
+    "10000": {
+      "projector_sum": 8.86846152070575e-13,
+      "transverse_contraction": 5.968558980384842e-13,
+      "longitudinal_contraction": 5.400124791776761e-13,
+      "longitudinal_vector_norm_and_contraction": 1.1812772982011666e-12
+    }
+  },
+  "min_abs_q_dot_n": 0.050026006882127196,
+  "max_abs_residuals": {
+    "projector_sum": 8.86846152070575e-13,
+    "transverse_contraction": 5.968558980384842e-13,
+    "longitudinal_contraction": 5.400124791776761e-13,
+    "longitudinal_vector_norm_and_contraction": 1.1812772982011666e-12
+  },
+  "checks": {
+    "projector_sum": true,
+    "transverse_contraction": true,
+    "longitudinal_contraction": true,
+    "longitudinal_vector_norm_and_contraction": true
+  },
+  "all_pass": true,
+  "numpy_version": "2.3.5",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}
+ok
+test_offshell_ambiguity (test_symbolic_checks.SymbolicChecks.test_offshell_ambiguity) ... {
+  "script": "scripts/verify_offshell_ambiguity.py",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "definitions": {
+    "D": "q^2 - m^2",
+    "Jprime": "J + D*K",
+    "exchange": "J_L*N*J_R/D"
+  },
+  "exchange_difference": "N*(D*KL*KR + JL*KR + JR*KL)",
+  "pole_residue_difference": "0",
+  "current_identity_shift": "-D*(Kchi*m - qK)",
+  "checks": {
+    "exchange_difference_is_regular": true,
+    "pole_residue_unchanged": true,
+    "current_identity_shift_is_proportional_to_D": true
+  },
+  "all_pass": true,
+  "scope_warning": "This verifies the algebraic ambiguity; it does not classify all allowed K structures in the five-point SU(2)-Higgs current."
+}
+ok
+test_projector_identities (test_symbolic_checks.SymbolicChecks.test_projector_identities) ... {
+  "script": "scripts/verify_projector_identities.py",
+  "sympy_version": "1.14.0",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "definitions": {
+    "Delta": "q^2 - m^2",
+    "d": "q.n",
+    "eta": "m^2 n/(2 q.n)",
+    "ell": "q/m - m n/(q.n)"
+  },
+  "expected_identities": {
+    "q_mu_PiT_mu_nu": "Delta*n^nu/(q.n)",
+    "q_mu_PiL_mu_nu": "Delta*(q^nu/m^2 - n^nu/(q.n))",
+    "q_dot_ell": "Delta/m",
+    "ell_squared": "-1 + Delta/m^2",
+    "PiT_plus_PiL": "-g^{mu nu} + q^mu q^nu/m^2"
+  },
+  "checks": {
+    "PiT_plus_PiL_equals_unitary_numerator": true,
+    "q_contract_PiT": true,
+    "q_contract_PiL": true,
+    "q_dot_ell": true,
+    "ell_squared": true,
+    "sum_identity_with_d_qn": true
+  },
+  "all_pass": true
+}
+ok
+test_vertex_st_identity (test_symbolic_checks.SymbolicChecks.test_vertex_st_identity) ... {
+  "script": "scripts/verify_vertex_st_identity.py",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "assumptions": [
+    "q+k+r=0",
+    "k.j=0",
+    "Goldstone phase chosen to match q.J=m*J_chi"
+  ],
+  "identity": "m*(g/2)*(q-r).j = g*m*q.j",
+  "residual_before_current_conservation": "g*m*(j0*k0 - j1*k1 - j2*k2 - j3*k3)/2",
+  "coefficient_of_k_dot_j": "g*m/2",
+  "residual_after_assumptions": "0",
+  "pass": true,
+  "scope_warning": "This checks one local cubic-vertex contraction only; it is not a complete five-point amplitude or a proof of the on-shell-recursive current identity."
+}
+ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 8.341s
+
+OK
