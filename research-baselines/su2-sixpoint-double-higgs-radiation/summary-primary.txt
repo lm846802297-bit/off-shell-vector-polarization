@@ -1,0 +1,20 @@
+{
+  "accepted": 8,
+  "rejected": 16,
+  "seed": 132023,
+  "maxima": {
+    "on_shell_and_fermion_equations": 9.547918011776346e-15,
+    "action_scalar_splitting_rule": 1.7763568394002505e-15,
+    "ordered_double_H_endpoint_ward": 1.1443916996305594e-16,
+    "virtual_H_endpoint_ward": 5.79553433516819e-16,
+    "raw_vs_closed_near_sources_scaled": 5.566383071120286e-17,
+    "nonzero_physical_double_H_amplitude": 0.07421081167420042,
+    "nonzero_physical_splitting_amplitude": 0.10892589203158984,
+    "Bose_order_block_exchange_scaled": 0.0,
+    "physical_gauge_variation_scaled": 4.540205825292465e-17,
+    "each_order_direct_vs_closed_scaled": 6.245004513516506e-17,
+    "wrong_source_analytic_variation_scaled": 6.834017936133213e-17,
+    "nonzero_wrong_source_double_H": 0.054807270300400376,
+    "nonzero_wrong_source_splitting": 0.0470787931496082
+  }
+}

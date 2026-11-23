@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "su2-double-higgs-radiation-two-seeds",
+  "created_at": "2026-11-23T13:27:40.334431226Z",
+  "record_type": "result_summary",
+  "project": {
+    "repository": "lm846802297-bit/off-shell-vector-polarization",
+    "project_id": "off-shell-vector-polarization",
+    "workstream_id": "su2-tree-gauge-closure"
+  },
+  "calculation": "Direct double-Higgs radiation on the same massive line and virtual Higgs splitting, sewn to a conserved source.",
+  "scope": {
+    "included": [
+      "six direct ordered chains",
+      "two virtual Higgs splitting chains",
+      "far conserved W sewing"
+    ],
+    "excluded": [
+      "general graph census",
+      "full six-point gauge closure",
+      "loop corrections"
+    ]
+  },
+  "benchmark": {
+    "fixtures": 20,
+    "xi": [
+      0.43,
+      1.0,
+      2.65
+    ]
+  },
+  "observables": [
+    {
+      "name": "largest physical far-source scaled gauge variation",
+      "value": 1.6184142622847341e-16,
+      "unit": "scaled amplitude",
+      "status": "computed"
+    }
+  ],
+  "data_files": [
+    {
+      "path": "research-baselines/su2-sixpoint-double-higgs-radiation/results-primary.json",
+      "role": "native-fixtures",
+      "format": "json",
+      "sha256": "77d876d56c44052d0f9c47c354e002afb6a561a196bb39fa18830879bdc12dce",
+      "bytes": 89499
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-double-higgs-radiation/results-holdout.json",
+      "role": "native-fixtures",
+      "format": "json",
+      "sha256": "965089ad2ac8db4c14c898540c4816acfe670e5c077db8fc1159109cae400ee8",
+      "bytes": 133659
+    }
+  ],
+  "scientific_status": "diagnostic",
+  "interpretation": "Both specified classes are nonzero and individually xi independent for the physical far current. No statement about omitted classes."
+}

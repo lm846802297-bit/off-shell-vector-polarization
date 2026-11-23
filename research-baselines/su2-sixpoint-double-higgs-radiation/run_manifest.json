@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "su2-double-higgs-radiation-two-seeds",
+  "created_at": "2026-11-23T13:27:40.334431226Z",
+  "record_type": "run_manifest",
+  "project": {
+    "repository": "lm846802297-bit/off-shell-vector-polarization",
+    "project_id": "off-shell-vector-polarization",
+    "workstream_id": "su2-tree-gauge-closure"
+  },
+  "source": {
+    "commit_sha": "ae185d2ac82c3d54edef574aeb6711e921abe7f0",
+    "script_path": "research-baselines/su2-sixpoint-double-higgs-radiation/check_double_higgs.py",
+    "script_sha256": "832d7a89d99c77aef808948d68ac98aa989d820b62c588b606e61b1599f37f24"
+  },
+  "inputs": [
+    {
+      "name": "pinned single-Higgs helper and fixture functions",
+      "source": "lm846802297-bit/off-shell-vector-polarization",
+      "version": "ae185d2ac82c3d54edef574aeb6711e921abe7f0",
+      "format": "python",
+      "uri": "https://github.com/lm846802297-bit/off-shell-vector-polarization/blob/ae185d2ac82c3d54edef574aeb6711e921abe7f0/research-baselines/su2-sixpoint-single-higgs-radiation/check_higgs_emission.py",
+      "bytes": 11404,
+      "sha256": "d05358a11f698dea04e34cf60b5017c42de3d6e6f131df8012f8855a941e62d2",
+      "transformation": "Retains fixture generation, Dirac conventions and action-vertex extraction. New double-radiation/splitting chains independently implemented."
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "model": "SU(2) chiral massive source, fixed T3 and distinguishable massless conserved far source",
+      "orders": [
+        6,
+        2
+      ],
+      "scope": "two specified classes only"
+    },
+    "numerics": {
+      "seeds": [
+        132023,
+        629431
+      ],
+      "accepted_counts": [
+        8,
+        12
+      ],
+      "xi": [
+        0.43,
+        1.0,
+        2.65
+      ],
+      "dtype": "complex128",
+      "scaled_gate": 1e-09
+    },
+    "conventions": {
+      "metric": "+---",
+      "momentum": "all incoming, ordered absorption along open fermion line",
+      "vertices": "W=-ia gamma PL; h=-ib; hhh=-i3M\u00b2/v"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "engine": "CPython",
+      "version": "3.12.14"
+    },
+    "dependencies": {
+      "numpy": "2.3.5",
+      "sympy": "1.14.0"
+    },
+    "hardware": {
+      "architecture": "x86_64",
+      "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "effective_process_affinity_cpus": 9,
+      "memory_bytes": 10451423232
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python research-baselines/su2-sixpoint-double-higgs-radiation/check_double_higgs.py --seed 132023 --points 8 --output research-baselines/su2-sixpoint-double-higgs-radiation/results-primary.json > research-baselines/su2-sixpoint-double-higgs-radiation/summary-primary.txt && PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python research-baselines/su2-sixpoint-double-higgs-radiation/check_double_higgs.py --seed 629431 --points 12 --output research-baselines/su2-sixpoint-double-higgs-radiation/results-holdout.json > research-baselines/su2-sixpoint-double-higgs-radiation/summary-holdout.txt",
+    "started_at": "2026-11-23T13:27:38.644635048Z",
+    "finished_at": "2026-11-23T13:27:40.334431226Z",
+    "exit_code": 0,
+    "wall_time_s": 2,
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "detached_commit",
+      "checkout_ref": null,
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null,
+      "working_tree_state": "dirty",
+      "dirty_paths": [
+        "research-baselines/su2-sixpoint-double-higgs-radiation/check_double_higgs.py",
+        "research/task_briefs/20261123-su2-double-higgs-radiation.md"
+      ]
+    }
+  },
+  "outputs": [
+    {
+      "path": "research-baselines/su2-sixpoint-double-higgs-radiation/results-primary.json",
+      "role": "native-fixtures",
+      "format": "json",
+      "sha256": "77d876d56c44052d0f9c47c354e002afb6a561a196bb39fa18830879bdc12dce",
+      "bytes": 89499
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-double-higgs-radiation/results-holdout.json",
+      "role": "native-fixtures",
+      "format": "json",
+      "sha256": "965089ad2ac8db4c14c898540c4816acfe670e5c077db8fc1159109cae400ee8",
+      "bytes": 133659
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-double-higgs-radiation/summary-primary.txt",
+      "role": "stdout",
+      "format": "txt",
+      "sha256": "4fa58962ec244120ce02c69394ed6afe0e823b5b8f34b324867f3260c9b0d56d",
+      "bytes": 861
+    },
+    {
+      "path": "research-baselines/su2-sixpoint-double-higgs-radiation/summary-holdout.txt",
+      "role": "stdout",
+      "format": "txt",
+      "sha256": "cba36fd9f5b4a0780e5800fad0ab10e5df5d17f0df2cbb649a76a79f56c49d76",
+      "bytes": 861
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "P1",
+        "name": "Same-line hh Ward contraction",
+        "category": "physical",
+        "status": "passed",
+        "observed": 3.510833468576701e-16,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical comparison, not an estimated physical uncertainty."
+      },
+      {
+        "check_id": "P2",
+        "name": "Virtual h Ward contraction",
+        "category": "physical",
+        "status": "passed",
+        "observed": 8.345155887641792e-16,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical comparison, not an estimated physical uncertainty."
+      },
+      {
+        "check_id": "P3",
+        "name": "All eight signed amplitudes against grouped formula",
+        "category": "independent",
+        "status": "passed",
+        "observed": 7.609091204154492e-17,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical comparison, not an estimated physical uncertainty."
+      },
+      {
+        "check_id": "P4",
+        "name": "Physical far source cancels gauge variation",
+        "category": "physical",
+        "status": "passed",
+        "observed": 1.6184142622847341e-16,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical comparison, not an estimated physical uncertainty."
+      },
+      {
+        "check_id": "P5",
+        "name": "Wrong-source gauge variation against exact formula",
+        "category": "independent",
+        "status": "passed",
+        "observed": 1.9478403400799705e-16,
+        "threshold": 1e-09,
+        "unit": "scaled amplitude",
+        "notes": "Numerical comparison, not an estimated physical uncertainty."
+      },
+      {
+        "check_id": "P6",
+        "name": "nonzero physical double H amplitude",
+        "category": "regression",
+        "status": "passed",
+        "observed": 0.2263024018268761,
+        "threshold": 0.0001,
+        "unit": "scaled amplitude",
+        "notes": "Threshold is a lower bound on the detected nonzero response."
+      },
+      {
+        "check_id": "P7",
+        "name": "nonzero physical splitting amplitude",
+        "category": "regression",
+        "status": "passed",
+        "observed": 0.12767327525934852,
+        "threshold": 0.0001,
+        "unit": "scaled amplitude",
+        "notes": "Threshold is a lower bound on the detected nonzero response."
+      },
+      {
+        "check_id": "P8",
+        "name": "nonzero wrong source double H",
+        "category": "regression",
+        "status": "passed",
+        "observed": 0.19842322662502135,
+        "threshold": 0.0001,
+        "unit": "scaled amplitude",
+        "notes": "Threshold is a lower bound on the detected nonzero response."
+      },
+      {
+        "check_id": "P9",
+        "name": "nonzero wrong source splitting",
+        "category": "regression",
+        "status": "passed",
+        "observed": 0.1217086261692491,
+        "threshold": 0.0001,
+        "unit": "scaled amplitude",
+        "notes": "Threshold is a lower bound on the detected nonzero response."
+      }
+    ],
+    "report_path": "research-baselines/su2-sixpoint-double-higgs-radiation/validation_report.json"
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "88beb8ffbd806c961bed59216d361c25d21a0253cdda3f2cb29a118a0cc3644c",
+      "task_id": "20261123-su2-double-higgs-radiation",
+      "task_brief_path": "research/task_briefs/20261123-su2-double-higgs-radiation.md",
+      "task_brief_sha256": "ee7e6f8ab88bbb12781185ca0586d439e4d05fb344cb98b5cf4677b8ae6a67cc",
+      "applied_profiles": [
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "rcrps-v1.0.1"
+      ],
+      "project_extensions": [
+        "AGENTS.md"
+      ]
+    },
+    "su2_scope": {
+      "prior_helper_blob": "25d04b734a686f16cbc090cb89e67b024bfa4373",
+      "source_checkout": "Exact detached previous science branch plus hashed uncommitted script and brief."
+    }
+  }
+}

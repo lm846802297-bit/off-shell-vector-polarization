@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "su2-double-higgs-radiation-two-seeds",
+  "created_at": "2026-11-23T13:27:40.334431226Z",
+  "record_type": "validation_report",
+  "status": "passed",
+  "checks": [
+    {
+      "check_id": "P1",
+      "name": "Same-line hh Ward contraction",
+      "category": "physical",
+      "status": "passed",
+      "observed": 3.510833468576701e-16,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical comparison, not an estimated physical uncertainty."
+    },
+    {
+      "check_id": "P2",
+      "name": "Virtual h Ward contraction",
+      "category": "physical",
+      "status": "passed",
+      "observed": 8.345155887641792e-16,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical comparison, not an estimated physical uncertainty."
+    },
+    {
+      "check_id": "P3",
+      "name": "All eight signed amplitudes against grouped formula",
+      "category": "independent",
+      "status": "passed",
+      "observed": 7.609091204154492e-17,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical comparison, not an estimated physical uncertainty."
+    },
+    {
+      "check_id": "P4",
+      "name": "Physical far source cancels gauge variation",
+      "category": "physical",
+      "status": "passed",
+      "observed": 1.6184142622847341e-16,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical comparison, not an estimated physical uncertainty."
+    },
+    {
+      "check_id": "P5",
+      "name": "Wrong-source gauge variation against exact formula",
+      "category": "independent",
+      "status": "passed",
+      "observed": 1.9478403400799705e-16,
+      "threshold": 1e-09,
+      "unit": "scaled amplitude",
+      "notes": "Numerical comparison, not an estimated physical uncertainty."
+    },
+    {
+      "check_id": "P6",
+      "name": "nonzero physical double H amplitude",
+      "category": "regression",
+      "status": "passed",
+      "observed": 0.2263024018268761,
+      "threshold": 0.0001,
+      "unit": "scaled amplitude",
+      "notes": "Threshold is a lower bound on the detected nonzero response."
+    },
+    {
+      "check_id": "P7",
+      "name": "nonzero physical splitting amplitude",
+      "category": "regression",
+      "status": "passed",
+      "observed": 0.12767327525934852,
+      "threshold": 0.0001,
+      "unit": "scaled amplitude",
+      "notes": "Threshold is a lower bound on the detected nonzero response."
+    },
+    {
+      "check_id": "P8",
+      "name": "nonzero wrong source double H",
+      "category": "regression",
+      "status": "passed",
+      "observed": 0.19842322662502135,
+      "threshold": 0.0001,
+      "unit": "scaled amplitude",
+      "notes": "Threshold is a lower bound on the detected nonzero response."
+    },
+    {
+      "check_id": "P9",
+      "name": "nonzero wrong source splitting",
+      "category": "regression",
+      "status": "passed",
+      "observed": 0.1217086261692491,
+      "threshold": 0.0001,
+      "unit": "scaled amplitude",
+      "notes": "Threshold is a lower bound on the detected nonzero response."
+    }
+  ]
+}
