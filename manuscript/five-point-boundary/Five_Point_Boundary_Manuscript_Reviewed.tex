@@ -267,6 +267,44 @@ polarization \(e_s=(4,0,\sqrt{17},i\sqrt{17})\) gives zero;
 neither \(n\cdot e_1\) nor \(n\cdot e_2\) vanishes.
 The zero is unchanged by normalizing the polarization.
 
+\paragraph{General polarizations.}
+The condition \(n\cdot e_s=0\) is not required to classify the zeros.
+Fix the momenta and the two physical polarizations \(e_i,e_j\), with
+\((i,j,s)\) cyclic. Collecting the terms linear in \(e_s\) in
+Eq.~\eqref{eq:cross} gives
+\begin{align}
+ \frac{m^2}{g_h^2}B_{\rm cross}&=e_s\cdot Q_s,\qquad
+ Q_s=R_iR_j(k_i-k_j)+\beta_s H+\gamma_s n,\nonumber\\
+ \beta_s&=\frac{(\ell_j-\ell_i)R_iR_j}{\ell_s},\nonumber\\
+ \gamma_s&=R_jF_i-R_iF_j
+  +\frac{R_j(k_j-k_s)\cdot e_i+R_i(k_s-k_i)\cdot e_j}{\ell_s}
+  \nonumber\\
+ &\quad+\frac{\ell_iR_iF_j-\ell_jR_jF_i
+           -2(M^2+k_s\cdot H)\beta_s}{\ell_s}.
+ \label{eq:general-cross-covector}
+\end{align}
+Only \(Q_s^\perp=Q_s-k_s(k_s\cdot Q_s)/m^2\) enters this
+contraction. If \(Q_s^\perp=0\), every physical \(e_s\) gives
+a zero. Otherwise the zeros form a two-dimensional complex
+subspace of the three-dimensional physical polarization space
+\(k_s^\perp\), or a projective line when the overall polarization
+scale is removed. Varying the first two polarizations gives all
+triples with \(B_{\rm cross}=0\). For real kinematics and real linear
+polarizations the corresponding space has dimension \(3-r\), where
+\(r\) is the real rank of the two linear forms obtained from
+\(\operatorname{Re}Q_s^\perp\) and \(\operatorname{Im}Q_s^\perp\)
+on \(k_s^\perp\). Thus the real dimension is one, two or three, not
+necessarily the real counterpart of the complex dimension above.
+For a fixed helicity basis, each basis state must be tested
+separately.
+
+This characterization recovers Eq.~\eqref{eq:onezero} upon imposing
+\(n\cdot e_s=0\). It also gives zeros with all three
+\(n\cdot e_a\ne0\): in the same equal-mass kinematics and with the same
+\(e_1,e_2\) as above, choose the real \(e_s=(4,0,\sqrt{17},0)\).
+Then \(Q_s\) is proportional to \(k_1-k_2\), and the different-arm
+boundary vanishes.
+
 The condition on the cross contribution does not remove the
 stationary Higgs pole. In the full boundary,
 \begin{equation}
@@ -446,7 +484,12 @@ gives
 \end{equation}
 The example with \(W^+\) and \(Z\) orthogonal follows by interchanging
 the charged legs, with the sign fixed by the cyclic vertex convention.
-The new term is proportional to \(g'^2\), since
+For general electroweak polarizations the same kernel classification
+applies, using the linear functional obtained by collecting the
+terms in \(e_s\) in Eq.~\eqref{eq:ew-cross} and projecting along
+\(k_s\) with the actual mass \(m_s\). The coefficients differ from
+those in Eq.~\eqref{eq:general-cross-covector}.
+The new term in Eq.~\eqref{eq:ew-obstruction} is proportional to \(g'^2\), since
 \(m_Z^2-m_W^2=g'^2v^2/4\) at tree level.
 
 As an exact check, choose \(m_W=1\), \(v=2\),
@@ -577,6 +620,7 @@ available in the \href{https://github.com/lm846802297-bit/off-shell-vector-polar
 % Before submission, insert author-confirmed funding and competing-interest
 % declarations as applicable, and the required generative-AI disclosure
 % before the references. See Author_Preflight.md in the source bundle.
+\clearpage
 \begin{thebibliography}{99}
 \setlength{\itemsep}{0pt}
 \setlength{\parsep}{0pt}
