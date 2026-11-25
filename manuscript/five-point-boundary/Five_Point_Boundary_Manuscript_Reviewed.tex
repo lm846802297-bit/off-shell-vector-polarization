@@ -28,16 +28,15 @@ vector line or to different lines at the cubic gauge vertex. We compute
 the tree-level boundary at complex infinity under a two-Higgs shift
 that preserves the Higgs-pair momentum. The equal-mass broken \(SU(2)\)
 theory exhibits a polarization cancellation of the different-arm
-boundary and allows an explicit check of unphysical-pole cancellation
-in linear \(R_\xi\) gauge. In the electroweak theory the charged
+boundary. In the electroweak theory the charged
 stationary currents are not conserved, and a term proportional to
 \(m_Z^2-m_W^2\) lifts the different-arm cancellation when one charged
 and the neutral polarization are orthogonal to the shift. The
 cancellation for two shift-orthogonal charged polarizations survives.
-A singlet scalar can add a stationary resonance pole without
-introducing a new different-arm structure. We also give the tree-level
-selection rule for associated production of a single extra vector in
-leptonic \(U(1)'\) extensions.
+Independent finite-\(R_\xi\) calculations check the full boundary
+and unphysical-pole cancellation in both theories. A singlet scalar
+can add a stationary resonance pole without changing the
+different-arm polarization criterion.
 \end{abstract}
 
 \section{Introduction}
@@ -501,11 +500,43 @@ graphs gives \(13i/72\), as in Eq.~\eqref{eq:ew-obstruction}.
 The direct sum of the other twelve gives \(-13109i/13200\).
 The separation is a statement about diagram classes in unitary
 gauge under this shift, not a zero of a physical cross section.
-The explicit linear-\(R_\xi\) cancellation in the previous section
-is for the equal-mass theory.
 At the stationary Higgs pole, the electroweak residue similarly
 factorizes into the trilinear Higgs coupling and the on-shell
 \(W^+W^-\to Zh\) amplitude \cite[Sec.~4.3]{Bachu}.
+
+\paragraph{Finite-gauge check.}
+We independently constructed the electroweak tree amplitude in
+linear \(R_\xi\) gauge with separate parameters \(\xi_W,\xi_Z\).
+In a Cartesian Higgs basis, the neutral doublet generator is
+\(T_Z=(g c_W\sigma^3-g's_W\mathbf{1})/2\).
+The anticommutators of the doublet generators in
+\((D_\mu\Phi)^\dagger D^\mu\Phi\) give both \(ZW^\pm G^\mp\)
+and \(ZW^\pm G^\mp h\) vertices in addition to the equal-mass
+interactions. In particular, the \(ZW^\pm G^\mp\) strength is
+proportional to \((m_Z^2-m_W^2)/m_W\) after removing the common
+\(WWZ\) coupling. Omitting such terms would not implement the
+finite-gauge check for the split-mass theory.
+
+A labelled recursion with the Cartesian vertices gives 52 trees
+in the \(W^1W^2Zhh\) projection: 18 without a Goldstone propagator,
+24 with one, and 10 with two. We compare its sum with the
+unitary-gauge result for \(m_W=80.377\), \(m_Z=91.1876\),
+\(M=125.25\) and \(v=246.22\), in GeV, taking \(c_W=m_W/m_Z\).
+Six kinematic points, including longitudinal polarizations,
+were tested with both null shifts and
+\((\xi_W,\xi_Z)=(0.31,1.7),(1.9,0.43),(3.2,4.2)\).
+The largest scaled differences are \(8.41\times10^{-14}\) for
+144 finite-shift amplitudes, \(2.13\times10^{-14}\) for
+36 boundaries and \(3.40\times10^{-14}\) for 216 physical
+moving residues. All 216 candidate unphysical moving residues
+are consistent with zero, with a maximum scaled magnitude
+\(1.02\times10^{-14}\). Laurent checks at the stationary
+root denominators, treating the gauge parameter as the
+complex variable, give a maximum scaled residue
+\(4.83\times10^{-12}\). As in Sec.~\ref{sec:gauge},
+the comparison is of the complete amplitude, not of
+individual topology classes. Deleting the charged
+Goldstone graphs spoils the agreement.
 
 \section{Scalar mixing and a leptonic \texorpdfstring{\(U(1)'\)}{U(1)'}}
 In a real singlet extension, write the doublet fluctuation as
@@ -616,13 +647,13 @@ under an all-line transverse deformation or imply a cross-section zero.
 
 \section*{Data availability}
 No external datasets were used. The scripts and benchmark outputs
-for the on-shell kinematic tests and complex-plane contour checks are
+for the equal-mass on-shell and complex-plane contour checks are
 available in the \href{https://github.com/lm846802297-bit/off-shell-vector-polarization/tree/b4a2765d85b92f909b13ceebbbe15eccc7b87174/research-baselines/su2-charged-fivepoint-boundary}{reproducibility archive}.
 
 % Before submission, insert author-confirmed funding and competing-interest
 % declarations as applicable, and the required generative-AI disclosure
 % before the references. See Author_Preflight.md in the source bundle.
-\clearpage
+\begingroup\small
 \begin{thebibliography}{99}
 \setlength{\itemsep}{0pt}
 \setlength{\parsep}{0pt}
@@ -685,4 +716,5 @@ Phys. Rev. C \textbf{62} (2000) 034003,
 \bibitem{ArkaniKaplan} N. Arkani-Hamed and J. Kaplan, JHEP \textbf{04} (2008) 076,
 \href{https://arxiv.org/abs/0801.2385}{arXiv:0801.2385}.
 \end{thebibliography}
+\endgroup
 \end{document}
