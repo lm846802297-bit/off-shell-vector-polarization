@@ -70,8 +70,13 @@ cancellation and check the full tree result in linear \(R_\xi\)
 gauge. We then restore hypercharge and determine which cancellation
 conditions survive. Finally, we distinguish the effect of gauge mass
 splitting from the stationary scalar pole induced by singlet mixing.
-All external vectors are physical and on shell, and the separation
-by topology refers to unitary gauge.
+Unlike a shift chosen to remove the boundary, this deformation
+holds the vector states and \(m_{hh}^2\) fixed. It leaves the physical
+poles in the pair invariant visible in the boundary, where they can
+be separated from terms due to radiation from distinct lines.
+Section~\ref{sec:higher} shows how the result fixes a stationary
+residue at six points. All external vectors are physical and on shell;
+the separation by topology refers to unitary gauge.
 
 \section{Kinematics and the four-point tensor}
 We take all momenta incoming, with metric \((+---)\). Denote the
@@ -226,6 +231,7 @@ stationary Higgs pole. In the full boundary,
 \begin{equation}
  \mathop{\rm Res}_{H^2=M^2}\bc
     =\frac{3M^2}{v} A_4(W^+W^-W^3h).
+ \label{eq:fixed-higgs-residue}
 \end{equation}
 The right-hand side does not vanish identically. For example, at
 right-angle two-body kinematics with the initial vector momenta
@@ -458,6 +464,57 @@ a loop. Nonzero hypercharge kinetic mixing relaxes this selection
 rule by inducing both \(WWA'\) and mixed neutral Higgs--vector
 vertices \cite{Curtin}. The statement in its absence does not
 constrain the complete one-loop amplitude.
+
+\section{From five points to higher-point boundaries}
+\label{sec:higher}
+Two features of the construction extend beyond five points.
+First, on any tree an internal edge carries the shift if and only
+if cutting it separates the two marked Higgs legs. These edges form
+the unique path between the Higgs insertions. All subtrees attached to
+that path carry momenta independent of \(z\), and can be evaluated once
+as ordinary tree currents. The different-arm topology at five points
+is the instance in which two shifted vector lines meet at a cubic
+gauge vertex. At higher points such a vertex can have an entire
+unshifted current attached to it. The path may also pass through
+quartic vertices or several successive gauge vertices. The separation
+into a shifted path and fixed currents therefore persists, but the
+five-point polarization criterion is not a higher-point identity.
+In computing the constant term one must retain subleading terms on
+the path whenever they multiply positive powers of \(z\).
+
+Second, the lower-point boundary fixes residues of the higher-point
+boundary on stationary physical poles. Let \(P\) be the momentum
+of such a channel, and let the left subamplitude contain both
+shifted legs. At generic kinematics, with other poles separated and
+the leading shifted denominators nonzero on this locus, tree
+factorization gives
+\begin{equation}
+ \mathop{\rm Res}_{P^2=m_I^2} B_N
+ =\sum_{\lambda_I} B_L(P,\lambda_I)\, A_R(-P,\lambda_I).
+ \label{eq:fixed-factorization}
+\end{equation}
+The product is understood in a dual basis of intermediate physical
+states. To obtain this equation, factorize \(A_N(z)\) at the fixed
+pole and take its \(z^0\) coefficient. The right subamplitude and the
+intermediate spin sum are independent of \(z\), so only the shifted
+left subamplitude contributes a boundary operation. The Higgs pole
+in Eq.~\eqref{eq:fixed-higgs-residue} is the case \(B_L=A_3(hhh)\).
+
+For example, in the all-incoming \(W^+W^-Z_1Z_2hh\) amplitude
+consider the channel \(P=k_{W^+}+k_{Z_1}\). At the stationary
+pole \(P^2=m_W^2\), the unshifted factor is
+\(A_3(W^+,Z_1,W^-(-P))\); the shifted factor is the five-point
+boundary for \(W^+(P)W^-Z_2hh\) computed above. With the cubic
+couplings restored, Eq.~\eqref{eq:fixed-factorization} gives this
+six-point residue without an off-shell continuation of the
+five-point result. It does not determine the full six-point
+boundary: terms regular on the stationary poles, including
+contributions from new shifted paths, are not fixed by their
+residues. At fixed multiplicity one can use the residue equations
+as constraints and compute the remaining terms from the shifted
+tree currents. This supplements, rather than replaces, other
+constructible shifts or general boundary-operator methods
+\cite{Ema,Jin}.
 
 \section{Conclusions}
 For the fixed-pair-momentum shift, the different-arm boundary is not
