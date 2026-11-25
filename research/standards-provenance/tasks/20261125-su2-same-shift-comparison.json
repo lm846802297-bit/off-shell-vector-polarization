@@ -1,0 +1,34 @@
+{
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "task_id": "20261125-su2-same-shift-comparison",
+  "repository": "lm846802297-bit/off-shell-vector-polarization",
+  "task_brief_path": "research/task_briefs/20261125-su2-same-shift-comparison.md",
+  "task_brief_sha256": "17e7c3263c447e19c63292d06c34b32e1da78db6e247baeb58113bd8cca929c2",
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "88beb8ffbd806c961bed59216d361c25d21a0253cdda3f2cb29a118a0cc3644c",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1",
+    "git-review-and-merge"
+  ],
+  "project_extensions": [
+    {
+      "path": "AGENTS.md",
+      "scope": "Off-shell boundary and analytic physical-state constraints",
+      "sha256": "0aa425ea552f8479e945420668162b4e565dc4ff0f97aef2af25615fe7736642"
+    }
+  ],
+  "acceptance_criteria": [
+    "Exact Laurent division for the two shifted four-point channels",
+    "Exact current conservation and same-arm sewing for all three arms",
+    "Exact six-diagram checks of three cancellation controls for each regular null direction",
+    "Native symbolic output repeated byte for byte"
+  ]
+}

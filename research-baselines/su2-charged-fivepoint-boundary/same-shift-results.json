@@ -1,0 +1,41 @@
+{
+  "four_point_fixed": "-59/91",
+  "four_point_ordered_constants": [
+    "41/64",
+    "41/64"
+  ],
+  "four_point_total": "1843/2912",
+  "same_arm_exact_checks": 3,
+  "cross_exact_controls": [
+    [
+      "one_n_orthogonal_nonzero",
+      "I",
+      "1/4"
+    ],
+    [
+      "one_n_orthogonal_nonzero",
+      "-I",
+      "1/4"
+    ],
+    [
+      "one_n_orthogonal_kernel",
+      "I",
+      "0"
+    ],
+    [
+      "one_n_orthogonal_kernel",
+      "-I",
+      "0"
+    ],
+    [
+      "two_n_orthogonal",
+      "I",
+      "0"
+    ],
+    [
+      "two_n_orthogonal",
+      "-I",
+      "0"
+    ]
+  ]
+}
