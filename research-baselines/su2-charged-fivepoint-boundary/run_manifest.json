@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "run_manifest",
+  "run_id": "20261125-su2-charged-fivepoint-boundary",
+  "created_at": "2026-11-25T17:55:25.377827+00:00",
+  "project": {
+    "project_id": "off-shell-vector-polarization",
+    "repository": "lm846802297-bit/off-shell-vector-polarization"
+  },
+  "source": {
+    "commit_sha": "3ec6142e971b7d85feab7f21419a6eaa1d13a3ff",
+    "script_path": "research-baselines/su2-charged-fivepoint-boundary/charged.py",
+    "script_sha256": "e01725c5ec38cdb9510a0b99541acd14a279e7e0511193d6d7465aed9c615a17"
+  },
+  "inputs": [
+    {
+      "name": "neutral graph validation for figure comparison only",
+      "source": "lm846802297-bit/off-shell-vector-polarization",
+      "version": "3ec6142e971b7d85feab7f21419a6eaa1d13a3ff",
+      "path": "research-baselines/su2-fixed-root-boundary/full-results.json",
+      "uri": "https://github.com/lm846802297-bit/off-shell-vector-polarization/blob/3ec6142e971b7d85feab7f21419a6eaa1d13a3ff/research-baselines/su2-fixed-root-boundary/full-results.json",
+      "format": "json",
+      "bytes": 47078,
+      "sha256": "dc46ed22a1ec54c07f3fe807f36d8d251c07fd62e2264c0fbf0d75a2db2667bf"
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "model": "single-doublet SU(2) Higgs theory with three degenerate physical vector bosons",
+      "channel": "W+ W- W3 h h; tree unitary gauge"
+    },
+    "numerics": {
+      "m": 1.0,
+      "M": 0.79,
+      "a": 0.31,
+      "seeds": [
+        20261125,
+        171108
+      ],
+      "deformations": 40
+    },
+    "conventions": {
+      "signature": "+---",
+      "complex_contractions": "bilinear"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "engine": "CPython",
+      "version": "3.12.14"
+    },
+    "dependencies": {
+      "numpy": "2.3.5",
+      "matplotlib": "3.10.8"
+    },
+    "hardware": {
+      "architecture": "x86_64"
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "command": "OPENBLAS_NUM_THREADS=1 python charged.py > results.json && python stationary.py > stationary.json && python figures.py ../su2-fixed-root-boundary/full-results.json",
+    "started_at": null,
+    "finished_at": null,
+    "exit_code": 0,
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "unknown",
+      "working_tree_state": "unknown",
+      "dirty_paths": [],
+      "checkout_ref": null,
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "research-baselines/su2-charged-fivepoint-boundary/results.json",
+      "role": "native",
+      "format": "json",
+      "sha256": "d2c6471f530d450e2f42fb5a86a6a620ef1d0f2d9bf3c7a839666e94aa47412c",
+      "bytes": 72353
+    },
+    {
+      "path": "research-baselines/su2-charged-fivepoint-boundary/stationary.json",
+      "role": "native",
+      "format": "json",
+      "sha256": "4517a8193af5a3112909b412b89b71c048e1da443d0f414367cba51bec840da9",
+      "bytes": 782
+    },
+    {
+      "path": "research-baselines/su2-charged-fivepoint-boundary/Fixed_Root_Boundary_Figures.pdf",
+      "role": "native",
+      "format": "pdf",
+      "sha256": "1c46e912c35d62a385fbfd31eba95f155a2c4ff2c2796bf8f97b3409100d66ef",
+      "bytes": 36293
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "check-1",
+        "name": "Independent label and color enumeration gives 18 trees; separate grouped and rooted amplitudes agree",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-2",
+        "name": "Forty phase-space deformations and all 240 physical moving-pole residues pass independent spin-state factorization",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-3",
+        "name": "Closed same-arm and cross-arm constants reproduce and repair signed contour reconstruction",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-4",
+        "name": "Polarization zero controls and stationary scalar pole factorization support the cancellation criteria",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-5",
+        "name": "Both native JSON outputs replay byte for byte; both PDF pages visually inspected",
+        "category": "independent",
+        "status": "passed"
+      }
+    ]
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "record_type": "task_provenance",
+      "provenance_version": "1.0.0",
+      "task_id": "20261125-su2-charged-fivepoint-boundary",
+      "repository": "lm846802297-bit/off-shell-vector-polarization",
+      "task_brief_path": "research/task_briefs/20261125-su2-charged-fivepoint-boundary.md",
+      "task_brief_sha256": "f6e09ad4d18a806d62b4f28e6d54670bd7a2daea59ec2c26eb4d32aa1e6694d2",
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "88beb8ffbd806c961bed59216d361c25d21a0253cdda3f2cb29a118a0cc3644c",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1",
+        "git-review-and-merge",
+        "generated-figure-and-report"
+      ],
+      "project_extensions": [
+        {
+          "path": "AGENTS.md",
+          "scope": "Off-shell boundary and analytic physical-state constraints",
+          "sha256": "0aa425ea552f8479e945420668162b4e565dc4ff0f97aef2af25615fe7736642"
+        }
+      ],
+      "acceptance_criteria": [
+        "Independent label and color enumeration gives 18 trees; separate grouped and rooted amplitudes agree",
+        "Forty phase-space deformations and all 240 physical moving-pole residues pass independent spin-state factorization",
+        "Closed same-arm and cross-arm constants reproduce and repair signed contour reconstruction",
+        "Polarization zero controls and stationary scalar pole factorization support the cancellation criteria",
+        "Both native JSON outputs replay byte for byte; both PDF pages visually inspected"
+      ]
+    },
+    "source_identity_note": "Pinned parent commit identifies figure reference. The new local numerical scripts are identified by their exact SHA-256 archive before Git creation."
+  }
+}

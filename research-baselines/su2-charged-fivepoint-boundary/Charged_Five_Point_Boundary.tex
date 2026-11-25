@@ -1,0 +1,278 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Fixed-root Higgs shifts in the non-Abelian five-point tree},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Fixed-root Higgs shifts in the non-Abelian five-point tree}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{\texorpdfstring{When do moving poles suffice? The non-Abelian
+(W\textsuperscript{+W}-W\^{}3hh)
+tree}{When do moving poles suffice? The non-Abelian (W+W-W\^{}3hh) tree}}\label{when-do-moving-poles-suffice-the-non-abelian-ww-w3hh-tree}
+
+\subsection{Result and conventions}\label{result-and-conventions}
+
+For three physical equal-mass vectors in a renormalizable single-doublet
+(SU(2)) theory, the complex two-Higgs shift gives a bounded, generically
+nonzero tree amplitude. The exact boundary separates into (i) the
+seagull and stationary Higgs exchange, (ii) ordered emissions on a
+single vector arm, and (iii) emissions from different arms of a true
+cubic gauge vertex. The first two use the same fixed-root building
+blocks as the
+\href{../su2-fixed-root-boundary/OffShell_Polarization_Boundary.md}{neutral
+result}. The third cannot be obtained by sewing just one neutral
+two-source boundary. We give a computable zero-boundary criterion and a
+nonzero stationary-pole witness. This is a result for the specified
+shift and field content, not a statement about all electroweak
+amplitudes.
+
+All momenta are incoming, metric (+---); (k\_i\textsuperscript{2=m}2),
+(e\_i\cdot k\_i=0), (p\textsuperscript{2=r}2=M\^{}2), and
+(k\_1+k\_2+k\_3+p+r=0). Here (m) is the common vector mass, (M=m\_h),
+(a=g\_2/2), and (v=m/a). Work in unitary gauge and factor out a common
+cubic-group factor and overall phase. In the real adjoint basis one may
+use legs (1,2,3); changing to (+,-,3) only changes the common color
+phase, because each surviving tree contains exactly one antisymmetric
+cubic group tensor, and scalar vertices and propagators are color
+diagonal. The cubic kinematic vertex is {[}
+V(k\_1,k\_2,k\_3;e\_1,e\_2,e\_3)
+=\sum\emph{\{\rm cyc\}(e\_i\cdot e\_j)(k\_i-k\_j)\cdot e\_s. {]} Use
+(U(Q)e={[}e-Q(Q\cdot e)/m\^{}2{]}/D(Q)), (D(Q)=Q\textsuperscript{2-m}2),
+(g\_h=2am), (g}\{hh\}=2a\^{}2). Let (H=p+r) and shift
+(p\mapsto p+zn,~r\mapsto r-zn), with (n\^{}2=n\cdot p=n\cdot r=0).
+Require (\ell\_i=2k\_i\cdot n\ne0) and nondegenerate propagators;
+complex contractions are bilinear with no conjugation. The space of
+projective null directions has two choices at generic equal-mass (p,r)
+kinematics.
+
+\subsection{Complete graph count and full
+amplitude}\label{complete-graph-count-and-full-amplitude}
+
+A five-leaf tree has either three cubic vertices or one cubic and one
+quartic. The only vertices of unitary-gauge single-doublet (SU(2)) are
+(WWW), (WWWW), (WWh), (WWhh), (hhh), (hhhh). An odd number of external
+vectors requires a cubic (WWW). There are \textbf{18 labelled trees}:
+
+\begin{itemize}
+\tightlist
+\item
+  6 ordered emissions of both Higgs particles on a single arm;
+\item
+  6 placements on different arms;
+\item
+  3 (WWhh) seagulls;
+\item
+  3 (h\^{}*\to hh) splits.
+\end{itemize}
+
+The quartic gauge vertex cannot attach to two Higgs particles through
+one allowed cubic vertex. A separate partition recursion with all these
+vertex types and fixed external adjoint colors finds the same count.
+
+For each arm (i), define (K\_i=k\_i+H) and {[}
+C\_0=2a\^{}2\left(1+\frac{3M^2}{H^2-M^2}\right),\qquad
+E\_i(p,r)=U(K\_i)\{C\_0e\_i+g\_h\^{}2{[}U(k\_i+p)+U(k\_i+r){]}e\_i\}.
+{]} A term with both Higgs particles on arm (i) is (V) with the (i)-th
+arguments replaced by (K\_i,E\_i). For distinct arms (i,j), replace
+those two arguments by (k\_i+x,g\_hU(k\_i+x)e\_i) and
+(k\_j+y,g\_hU(k\_j+y)e\_j), summing over cyclic arm pairs and
+((x,y)=(p,r),(r,p)). This is the complete signed amplitude before taking
+any large-(z) limit.
+
+\subsection{Closed boundary, and a practical cancellation
+test}\label{closed-boundary-and-a-practical-cancellation-test}
+
+Set (R\_i=(n\cdot e\_i)/\ell\emph{i) and {[}
+F\_i=\frac{H\cdot e_i-2R_i(M^2+k_i\cdot H)}{\ell_i},\qquad
+S\_i=-\frac{R_i(2k_i+H)+nF_i}{m^2}. {]} For the same-arm terms, expand
+(U(k\_i+x+wn)e\_i) for (w=\pm z). Its linear part is (-w,nR\_i/m\^{}2),
+which cancels between the two orders. The sum of constants is (S\_i).
+Thus the same-arm plus fixed part (B}\{\rm same\}) is obtained by
+inserting {[} B\_i=U(K\_i)(C\_0e\_i+g\_h\^{}2 S\_i) {]} in the (i)-th
+arm of (V), again using momentum (K\_i). The other two physical
+equal-mass vectors yield a conserved (WWW) current at that arm, as
+follows directly from contracting the cubic vertex with its root
+momentum. This is why the neutral fixed-root two-source construction can
+be sewn into this part.
+
+For different arms, let (L\_i=k\_i+x+wn,~L\_j=k\_j+y-wn),
+(L\_i+L\_j+k\_s=0), (b\_i=L\_i\cdot e\_i,~b\_j=L\_j\cdot e\_j). The two
+contractions with (L\_i) and (L\_j), using (k\_s\textsuperscript{2=m}2)
+and (k\_s\cdot e\_s=0), yield the exact identity {[}
+
+\begin{split}
+ V(L_i,L_j,k_s;U(L_i)e_i,U(L_j)e_j,e_s)
+ &= \frac{V(L_i,L_j,k_s;e_i,e_j,e_s)}{D_iD_j}\\
+ &+\frac{1}{m^2}\left[\frac{b_i}{D_i}e_j\cdot e_s
+   -\frac{b_j}{D_j}e_i\cdot e_s
+   +\frac{b_ib_j}{D_iD_j}L_i\cdot e_s\right].
+\end{split}
+
+{]} Here (D\_\{i,j\}=D(L\_\{i,j\})). The first term decays as (1/w); the
+last term seems to grow as (w), but its growth cancels when the labelled
+Higgs assignments are paired. The two single-ratio constants
+proportional to (R\_i(e\_j\cdot e\_s)) and (R\_j(e\_i\cdot e\_s)) cancel
+in the cyclic sum. The surviving cross-arm boundary is {[}
+B\_\{\rm cross\}=\frac{g_h^2}{m^2}\sum\emph{\{\rm cyc\}
+\left[ R_iR_j(k_i-k_j)\cdot e_s+
+ (n\cdot e_s)(R_jF_i-R_iF_j)\right]. {]} There is no growing part of the
+sum. The boundary is exactly
+(B}\infty=B\_\{\rm same\}+B\_\{\rm cross\}). Given ((k\_i,e\_i,p,r,n)),
+these formulas use the unshifted vectors and scalar invariants and no
+large-(z) fit. The moving physical poles alone recover (A(0)) \textbf{if
+and only if} this sum vanishes at the point. In particular:
+
+\begin{itemize}
+\tightlist
+\item
+  If at least two physical polarizations obey (n\cdot e\_i=0), then
+  (B\_\{\rm cross\}=0) identically. One such polarization does not
+  suffice. The stationary and same-arm terms need not vanish.
+\item
+  The \emph{full} vanishing condition is a linear kernel in any one
+  vector polarization when the other two are fixed. The explicit
+  controls include nonzero amplitudes lying in this kernel, rather than
+  setting the entire process to zero. The kernel is over complex
+  physical polarizations; it is not in general a statement about a
+  standard helicity eigenstate.
+\end{itemize}
+
+The boundary contains a physical stationary pole in (H\^{}2), so the
+full boundary cannot vanish identically for either regular branch of the
+shift. Its residue at (H\textsuperscript{2=M}2) is ((3M\^{}2/v)
+A\_4(W\textsuperscript{+W}-W\^{}3h)). The other terms are generically
+regular at that pole and cannot cancel it. For a concrete witness,
+choose opposite incoming three-momenta along (z), outgoing vector and
+scalar along (x), the first two polarizations along (y) and the third
+along (z). Then (A\_4=2g\_h\textbar{}\mathbf k\_1\textbar{}\sum\_i
+1/D(K\_i)); this is not identically zero, as seen also by its
+large-energy coefficient (-3/(4 E\^{}2)) in the denominators' sum. The
+physical five-point (hh) region has (H\textsuperscript{2\ge4M}2); the
+pole argument uses analytic continuation, not a claimed real (h\to hh)
+decay.
+
+\subsection{Independent checks}\label{independent-checks}
+
+The recorded 40 deformations (20 real (2\to3) phase-space points, two
+null directions) have six distinct moving vector poles. For each pole
+the three analytically dual spin states sew an (WWh) vertex to the
+complete four-point (WWWh) tree, and agree with a small-contour
+extraction to (8.9\times10\^{}\{-14\}) scaled. The independent rooted
+tree evaluator uses explicit color permutations of the derivative slots,
+rather than the grouped formula; agreement is (2.6\times10\^{}\{-15\}).
+A contour outside all moving poles checks the constant to
+(2.2\times10\^{}\{-13\}), and restoring it reconstructs the unshifted
+result to (7.9\times10\^{}\{-15\}). The output also includes
+positive-power contour checks, two-polarization cancellation controls
+that retain a nonzero full boundary, and full-boundary cancellation
+controls that retain a nonzero amplitude. No finite-(\xi) tensor
+cross-check is claimed for the charged process.
+
+\subsection{What is and is not new relative to known
+results}\label{what-is-and-is-not-new-relative-to-known-results}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://arxiv.org/html/2611.13096v1\#S3}{Ke--Liu--Mahbub,
+  arXiv:2611.13096v1 §§3--4, Appendix B} derive a polarization
+  continuation from on-shell factorization and use ALT for their
+  constructibility result. Our fixed-root scalar shift leaves some
+  propagator invariants constant and gives \emph{linear} moving
+  denominators; it does not obey the large-(z) assumptions of their ALT
+  bound. This is not an ALT counterexample or a different physical
+  massive spin sum.
+\item
+  \href{https://arxiv.org/html/2403.15538\#S2.SS2}{Ema et al.,
+  arXiv:2403.15538, §2.2} explicitly distinguish their ALT from null
+  shifts whose propagators scale differently, and discuss spin-dependent
+  constructibility. Shift dependence itself is not a novelty here. We
+  supply explicit gauge/Higgs boundary coefficients and polarization
+  cancellation conditions for one different five-point deformation.
+\item
+  \href{https://arxiv.org/abs/1910.13407}{Franken--Schwinn,
+  arXiv:1910.13407, §5} already analyze massive tree constructibility
+  and when more lines suffice. Their existence and scaling statements do
+  not identify the fixed-vector two-Higgs boundary written above.
+\item
+  \href{https://doi.org/10.1007/JHEP12\%282019\%29058}{Durieux,
+  Kitahara, Shadmi and Weiss, JHEP 12 (2019) 058, §5.2} explicitly
+  discuss adverse large-(z) behavior and reconstruct the four-point
+  (W\overline W hh) amplitude from all physical invariants plus a
+  nonfactorizable term determined by the ultraviolet behavior. This is
+  close precedent: neither the existence of a Higgs contact nor failure
+  of a two-line shift at four points is our novelty. The present result
+  adds the two moving legs of the cubic gauge vertex, their cross-arm
+  term and its polarization selection rule, and distinguishes poles
+  stationary in (z) from interactions local in all invariants at five
+  points.
+\item
+  \href{https://arxiv.org/abs/1507.00463}{Jin--Feng, arXiv:1507.00463}
+  and \href{https://arxiv.org/abs/2210.07025}{Huang--Jin--Li,
+  arXiv:2210.07025} supply systematic boundary-operator methods. We do
+  not claim to invent boundary operators or the rational contour
+  identity. Our scoped contribution is the explicit decomposition and
+  the algebraic two-polarization selection rule for a genuine
+  broken-gauge five-point process, paired with the neutral two-source
+  and Yukawa six-point checks.
+\end{itemize}
+
+The case is no longer merely one more example of a nonzero boundary: it
+resolves what must be added, what vanishes as a tensor contraction, and
+why even the simpler common contribution can survive. It is still a
+narrow result. We do not claim general-multiplicity, nondegenerate
+electroweak, complex-pole or loop theorems, or guaranteed publication.
+
+\end{document}
