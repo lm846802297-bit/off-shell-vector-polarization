@@ -449,20 +449,10 @@ Define
 \begin{equation}
  {\cal C}_{ijs}=R_iR_j(k_i-k_j)\cdot e_s
             +(n\cdot e_s)(R_jF_i-R_iF_j).
+ \label{eq:ew-C}
 \end{equation}
-In the first two contractions of Eq.~\eqref{eq:ward}, the terms
-\(-D(L_j)\) and \(D(L_i)\) are replaced by \(m_s^2-L_j^2\)
-and \(L_i^2-m_s^2\), respectively. The double contraction is
-\(-m_s^2 L_i\cdot e_s\). When divided by the propagator
-denominators, the differences \(m_j^2-m_s^2\) and \(m_i^2-m_s^2\)
-in the single contractions give terms of order \(1/z\).
-The products of two longitudinal numerators, together with the
-longitudinal pieces of the single contractions, leave the coefficient
-\((m_i^2+m_j^2-m_s^2)/(m_i^2m_j^2)\) multiplying
-\(\rho_i\rho_j L_i\cdot e_s\). The linear term cancels between
-the two assignments of the Higgs momenta. In contrast to the
-degenerate case, the cyclic sum of the remaining single-ratio
-constants does not vanish. The result is
+Expanding both Higgs assignments and then summing over the
+three pairs of arms gives (see Appendix~\ref{app:ew-cross})
 \begin{align}
  B_{\rm cross}^{\rm EW}
   ={}&\frac{4}{v^2}\sum_{\rm cyc}(m_i^2+m_j^2-m_s^2){\cal C}_{ijs}
@@ -482,13 +472,35 @@ gives
 \end{equation}
 The example with \(W^+\) and \(Z\) orthogonal follows by interchanging
 the charged legs, with the sign fixed by the cyclic vertex convention.
-For general electroweak polarizations the same kernel classification
-applies, using the linear functional obtained by collecting the
-terms in \(e_s\) in Eq.~\eqref{eq:ew-cross} and projecting along
-\(k_s\) with the actual mass \(m_s\). The coefficients differ from
-those in Eq.~\eqref{eq:general-cross-covector}.
 The new term in Eq.~\eqref{eq:ew-obstruction} is proportional to \(g'^2\), since
 \(m_Z^2-m_W^2=g'^2v^2/4\) at tree level.
+
+For general polarizations, fix \(e_i,e_j\) and let \((i,j,s)\)
+be cyclic. Define \(\omega_s=m_i^2+m_j^2-m_s^2\) and
+\(\Delta_s=m_i^2-m_j^2\), with \(\omega_i,\omega_j,\Delta_i,\Delta_j\)
+given by cyclic rotation. The explicit linear form is
+\begin{align}
+ \frac{v^2}{4}B_{\rm cross}^{\rm EW}
+   &=e_s\cdot Q_s^{\rm EW},\nonumber\\
+ Q_s^{\rm EW}
+   &=\omega_s R_iR_j(k_i-k_j)+\beta_s^{\rm EW}H
+      +\gamma_s^{\rm EW}n
+      +2\Delta_i R_i e_j+2\Delta_j R_j e_i,\nonumber\\
+ \beta_s^{\rm EW}
+   &=\frac{(\omega_j\ell_j-\omega_i\ell_i)R_iR_j}{\ell_s},\nonumber\\
+ \gamma_s^{\rm EW}
+   &=\omega_s(R_jF_i-R_iF_j)
+    +\frac{\omega_i R_j(k_j-k_s)\cdot e_i
+          +\omega_j R_i(k_s-k_i)\cdot e_j}{\ell_s}\nonumber\\
+   &\quad+\frac{\omega_i\ell_i R_iF_j-\omega_j\ell_j R_jF_i
+       -2(M^2+k_s\cdot H)\beta_s^{\rm EW}
+       +2\Delta_s(e_i\cdot e_j)}{\ell_s}.
+ \label{eq:ew-covector}
+\end{align}
+The criterion is \(e_s\cdot Q_s^{{\rm EW},\perp}=0\), where
+\(Q_s^{{\rm EW},\perp}=Q_s^{\rm EW}-k_s(k_s\cdot Q_s^{\rm EW})/m_s^2\).
+The complex and real kernels have the same dimension rules as
+in Sec.~3. For equal masses \(Q_s^{\rm EW}=m^2 Q_s\).
 
 As an exact check, choose \(m_W=1\), \(v=2\),
 \(k_+=(3,2,2,0)\), \(k_-=(3,-2,2,0)\), and
@@ -506,6 +518,15 @@ factorizes into the trilinear Higgs coupling and the on-shell
 \(W^+W^-\to Zh\) amplitude \cite[Sec.~4.3]{Bachu}.
 
 \paragraph{Finite-gauge check.}
+For physical on-shell external states, the full tree amplitude in
+two gauges agrees on an open set of real kinematics. The amplitudes
+are rational functions of the momenta and polarizations, so this
+identity continues to the complex on-shell kinematics of the
+Higgs shift. Taking the Laurent coefficient then gives the same
+\(B_\infty\) in both gauges. This argument applies to the sum of
+all diagrams; the mass-splitting term in
+Eq.~\eqref{eq:ew-obstruction} refers to the unitary-gauge split.
+
 We independently constructed the electroweak tree amplitude in
 linear \(R_\xi\) gauge with separate parameters \(\xi_W,\xi_Z\).
 In a Cartesian Higgs basis, the neutral doublet generator is
@@ -631,6 +652,74 @@ by contrast, rescales the different-arm term and can add a fixed
 scalar pole. These results distinguish vector-mass and scalar-pole
 effects for the specified shift. They do not constrain constructibility
 under an all-line transverse deformation or imply a cross-section zero.
+
+\appendix
+\section{Expansion of the electroweak different-arm graphs}
+\label{app:ew-cross}
+For a cyclic triple \((i,j,s)\), let
+\(L_i=k_i+x+wn\) and \(L_j=k_j+y-wn\).
+The two assignments are \((x,y,w)=(p,r,z)\) and \((r,p,-z)\).
+Write \(D_i=D_i(L_i)\), \(D_j=D_j(L_j)\) and
+\(\rho_a=L_a\cdot e_a/D_a\). With the common \(WWZ\)
+factor still removed, the amplitude of one graph is
+\begin{align}
+ \frac{{\cal A}_{ijs}(x,y;w)}{g_i g_j}
+ &=\frac{V(L_i,L_j,k_s;e_i,e_j,e_s)}{D_iD_j}
+   +\frac{\rho_i}{m_i^2}\left(1+\frac{m_j^2-m_s^2}{D_j}\right)
+          e_j\cdot e_s\nonumber\\
+ &\quad-\frac{\rho_j}{m_j^2}\left(1+\frac{m_i^2-m_s^2}{D_i}\right)
+          e_i\cdot e_s
+   +\frac{\omega_s}{m_i^2m_j^2}\rho_i\rho_j L_i\cdot e_s.
+ \label{eq:ew-assignment-exact}
+\end{align}
+Indeed the longitudinal part on arm \(i\) contracts the cubic
+vertex to \((m_s^2-L_j^2)e_j\cdot e_s
+-(L_j\cdot e_j)(L_i\cdot e_s)\); on arm \(j\), the result is
+\((L_i^2-m_s^2)e_i\cdot e_s
+-(L_i\cdot e_i)(L_i\cdot e_s)\). The double contraction gives
+\(-m_s^2 L_i\cdot e_s\). These are Eq.~\eqref{eq:ward}
+with the mass of the unshifted leg kept explicit. The first term of
+Eq.~\eqref{eq:ew-assignment-exact} and the explicit mass differences
+divided by \(D_i\) or \(D_j\) contribute only at \(O(z^{-1})\).
+
+For an unshifted Higgs momentum \(x\), define
+\[
+ c_a(x)=\frac{(k_a+x)\cdot e_a-R_aD_a(k_a+x)}{\ell_a},
+ \qquad c_a(p)+c_a(r)=F_a .
+\]
+Then \(\rho_i=R_i+c_i(x)/w+O(w^{-2})\) and
+\(\rho_j=R_j-c_j(y)/w+O(w^{-2})\).
+Using \(g_i=2m_i^2/v\), the two full expansions through the
+constant term are
+\begin{align}
+ \frac{v^2}{4}{\cal A}_{ijs}(p,r;z)
+ &=S_{ijs}+\omega_s\Big[
+     zR_iR_j(n\cdot e_s)+R_iR_j(k_i+p)\cdot e_s
+       \nonumber\\
+ &\hspace{25mm}+(n\cdot e_s)\big(R_jc_i(p)-R_ic_j(r)\big)\Big]
+       +O(z^{-1}),\nonumber\\
+ \frac{v^2}{4}{\cal A}_{ijs}(r,p;-z)
+ &=S_{ijs}+\omega_s\Big[
+     -zR_iR_j(n\cdot e_s)+R_iR_j(k_i+r)\cdot e_s
+       \nonumber\\
+ &\hspace{25mm}+(n\cdot e_s)\big(R_jc_i(r)-R_ic_j(p)\big)\Big]
+       +O(z^{-1}),
+ \label{eq:ew-assignment-expand}\\
+ S_{ijs}&=m_j^2 R_i(e_j\cdot e_s)-m_i^2 R_j(e_i\cdot e_s).
+ \nonumber
+\end{align}
+The \(O(z)\) terms cancel within each pair. In the sum of the
+constants, \((2k_i+H)\cdot e_s=(k_i-k_j)\cdot e_s\), so the
+weighted pair gives \(\omega_s{\cal C}_{ijs}\). The remaining
+single-ratio terms give \(2S_{ijs}\) per pair, and the cyclic sum
+satisfies
+\[
+ \sum_{\rm cyc} S_{ijs}
+   =\sum_{\rm cyc}(m_j^2-m_s^2)R_i(e_j\cdot e_s).
+\]
+This yields Eq.~\eqref{eq:ew-cross}. When \(m_i=m_j=m_s=m\),
+the last sum vanishes identically and \(\omega_s=m^2\), so
+\(4m^2/v^2=g_h^2/m^2\) and Eq.~\eqref{eq:cross} follows.
 
 \section*{Data availability}
 No external datasets were used. The scripts and benchmark outputs
