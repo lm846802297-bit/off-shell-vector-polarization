@@ -1,0 +1,4 @@
+196974fe69fa540d3b3b364cda2f5d11933ca79a12616188401a36c999a05e0e  ../su2-sixpoint-connected-tree/check_connected_tree.py
+d89af9e44ed69d5dccb05410be19795c07579762daf832c36238e3e598d22112  ../su2-sixpoint-connected-tree/results-holdout.json
+6d16781fad9926e22895538f61908a9aa0737b78c24424c699e17b812d81e954  ../su2-sixpoint-connected-tree/results-primary.json
+832d7a89d99c77aef808948d68ac98aa989d820b62c588b606e61b1599f37f24  ../su2-sixpoint-double-higgs-radiation/check_double_higgs.py

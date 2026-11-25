@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "run_manifest",
+  "run_id": "20261125-su2-fixed-root-boundary",
+  "created_at": "2026-11-25T17:45:51.885964+00:00",
+  "project": {
+    "project_id": "off-shell-vector-polarization",
+    "repository": "lm846802297-bit/off-shell-vector-polarization"
+  },
+  "source": {
+    "commit_sha": "ba7dfb747da24809d1c1d9250bd9f8f6ce3677bf",
+    "script_path": "research-baselines/su2-fixed-root-boundary/full.py",
+    "script_sha256": "7aaa4fbf942bdc39317a7344f7b7ed3a57f4422035cf575598f9c29a0efa783d"
+  },
+  "inputs": [
+    {
+      "name": "check_connected_tree.py",
+      "source": "lm846802297-bit/off-shell-vector-polarization",
+      "version": "ba7dfb747da24809d1c1d9250bd9f8f6ce3677bf",
+      "path": "research-baselines/su2-sixpoint-connected-tree/check_connected_tree.py",
+      "uri": "https://github.com/lm846802297-bit/off-shell-vector-polarization/blob/ba7dfb747da24809d1c1d9250bd9f8f6ce3677bf/research-baselines/su2-sixpoint-connected-tree/check_connected_tree.py",
+      "format": "py",
+      "bytes": 15024,
+      "sha256": "196974fe69fa540d3b3b364cda2f5d11933ca79a12616188401a36c999a05e0e"
+    },
+    {
+      "name": "results-holdout.json",
+      "source": "lm846802297-bit/off-shell-vector-polarization",
+      "version": "ba7dfb747da24809d1c1d9250bd9f8f6ce3677bf",
+      "path": "research-baselines/su2-sixpoint-connected-tree/results-holdout.json",
+      "uri": "https://github.com/lm846802297-bit/off-shell-vector-polarization/blob/ba7dfb747da24809d1c1d9250bd9f8f6ce3677bf/research-baselines/su2-sixpoint-connected-tree/results-holdout.json",
+      "format": "json",
+      "bytes": 287649,
+      "sha256": "d89af9e44ed69d5dccb05410be19795c07579762daf832c36238e3e598d22112"
+    },
+    {
+      "name": "results-primary.json",
+      "source": "lm846802297-bit/off-shell-vector-polarization",
+      "version": "ba7dfb747da24809d1c1d9250bd9f8f6ce3677bf",
+      "path": "research-baselines/su2-sixpoint-connected-tree/results-primary.json",
+      "uri": "https://github.com/lm846802297-bit/off-shell-vector-polarization/blob/ba7dfb747da24809d1c1d9250bd9f8f6ce3677bf/research-baselines/su2-sixpoint-connected-tree/results-primary.json",
+      "format": "json",
+      "bytes": 202573,
+      "sha256": "6d16781fad9926e22895538f61908a9aa0737b78c24424c699e17b812d81e954"
+    },
+    {
+      "name": "check_double_higgs.py",
+      "source": "lm846802297-bit/off-shell-vector-polarization",
+      "version": "ba7dfb747da24809d1c1d9250bd9f8f6ce3677bf",
+      "path": "research-baselines/su2-sixpoint-double-higgs-radiation/check_double_higgs.py",
+      "uri": "https://github.com/lm846802297-bit/off-shell-vector-polarization/blob/ba7dfb747da24809d1c1d9250bd9f8f6ce3677bf/research-baselines/su2-sixpoint-double-higgs-radiation/check_double_higgs.py",
+      "format": "py",
+      "bytes": 10195,
+      "sha256": "832d7a89d99c77aef808948d68ac98aa989d820b62c588b606e61b1599f37f24"
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "model": "renormalizable single-doublet neutral SU(2)-Higgs",
+      "calculation": "tree-level fixed-root null shift"
+    },
+    "numerics": {
+      "reduced_cases": 72,
+      "full_reconstructions": 40,
+      "xi_contours": 24
+    },
+    "conventions": {
+      "signature": "+---",
+      "contract_complex": "bilinear analytic contraction"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "engine": "CPython",
+      "version": "3.12.14"
+    },
+    "dependencies": {
+      "numpy": "2.3.5",
+      "sympy": "1.14.0"
+    },
+    "hardware": {
+      "architecture": "x86_64"
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "command": "OPENBLAS_NUM_THREADS=1 python boundary.py > results.json && OPENBLAS_NUM_THREADS=1 python full.py .. > full-results.json",
+    "started_at": null,
+    "finished_at": null,
+    "exit_code": 0,
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "unknown",
+      "working_tree_state": "unknown",
+      "dirty_paths": [],
+      "checkout_ref": null,
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "research-baselines/su2-fixed-root-boundary/results.json",
+      "role": "native",
+      "format": "json",
+      "sha256": "016a98a0da55d1800a9df736006dc4814e6c489937d173136db4161f0cac5338",
+      "bytes": 35899
+    },
+    {
+      "path": "research-baselines/su2-fixed-root-boundary/full-results.json",
+      "role": "native",
+      "format": "json",
+      "sha256": "dc46ed22a1ec54c07f3fe807f36d8d251c07fd62e2264c0fbf0d75a2db2667bf",
+      "bytes": 47078
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "check-1",
+        "name": "Exact bridge polynomial division and Gram-complement witness",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-2",
+        "name": "72 sewn-source cases independently check finite residues and outer-contour boundary",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-3",
+        "name": "40 complete six-point reconstructions from six moving poles plus the derived boundary",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-4",
+        "name": "24 whole R_xi tensor graph contour comparisons on four locked fixtures",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-5",
+        "name": "Both native result JSON files are reproduced byte for byte",
+        "category": "independent",
+        "status": "passed"
+      }
+    ]
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "record_type": "task_provenance",
+      "provenance_version": "1.0.0",
+      "task_id": "20261125-su2-fixed-root-boundary",
+      "repository": "lm846802297-bit/off-shell-vector-polarization",
+      "task_brief_path": "research/task_briefs/20261125-su2-fixed-root-boundary.md",
+      "task_brief_sha256": "cc92e5135a7374c69b45e619b7fbac7c3302f6df8d32268ae11c12a76bd65cee",
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "88beb8ffbd806c961bed59216d361c25d21a0253cdda3f2cb29a118a0cc3644c",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1",
+        "git-review-and-merge"
+      ],
+      "project_extensions": [
+        {
+          "path": "AGENTS.md",
+          "scope": "Goldstone/BRST and complex-shift evidence boundaries",
+          "sha256": "0aa425ea552f8479e945420668162b4e565dc4ff0f97aef2af25615fe7736642"
+        }
+      ],
+      "acceptance_criteria": [
+        "Exact bridge polynomial division and Gram-complement witness",
+        "72 sewn-source cases independently check finite residues and outer-contour boundary",
+        "40 complete six-point reconstructions from six moving poles plus the derived boundary",
+        "24 whole R_xi tensor graph contour comparisons on four locked fixtures",
+        "Both native result JSON files are reproduced byte for byte"
+      ]
+    },
+    "source_identity_note": "The source commit pins the public parent code and fixtures. New local source was executed before commit; exact delivered script identities are in the source and SHA256SUMS."
+  }
+}

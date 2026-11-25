@@ -1,0 +1,35 @@
+{
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "task_id": "20261125-su2-fixed-root-boundary",
+  "repository": "lm846802297-bit/off-shell-vector-polarization",
+  "task_brief_path": "research/task_briefs/20261125-su2-fixed-root-boundary.md",
+  "task_brief_sha256": "cc92e5135a7374c69b45e619b7fbac7c3302f6df8d32268ae11c12a76bd65cee",
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "88beb8ffbd806c961bed59216d361c25d21a0253cdda3f2cb29a118a0cc3644c",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1",
+    "git-review-and-merge"
+  ],
+  "project_extensions": [
+    {
+      "path": "AGENTS.md",
+      "scope": "Goldstone/BRST and complex-shift evidence boundaries",
+      "sha256": "0aa425ea552f8479e945420668162b4e565dc4ff0f97aef2af25615fe7736642"
+    }
+  ],
+  "acceptance_criteria": [
+    "Exact bridge polynomial division and Gram-complement witness",
+    "72 sewn-source cases independently check finite residues and outer-contour boundary",
+    "40 complete six-point reconstructions from six moving poles plus the derived boundary",
+    "24 whole R_xi tensor graph contour comparisons on four locked fixtures",
+    "Both native result JSON files are reproduced byte for byte"
+  ]
+}
