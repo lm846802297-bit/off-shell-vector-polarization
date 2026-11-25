@@ -11,11 +11,11 @@
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\sg}{\sigma}
 \newcommand{\bc}{B_{\infty}}
-\title{The five-point boundary for a two-Higgs shift in broken \(SU(2)\)}
+\title{Five-point boundaries for a two-Higgs shift: from broken \(SU(2)\) to \(W^+W^-\to Zhh\)}
 \author{Ming Li\,\orcidlink{0009-0007-7322-010X}\thanks{Corresponding author. E-mail: \href{mailto:by2419116@buaa.edu.cn}{\texttt{by2419116@buaa.edu.cn}}.}\\[0.4em]
   \normalsize School of Physics, Beihang University, Beijing 102206, China}
 \date{}
-\hypersetup{pdfauthor={Ming Li},pdftitle={The five-point boundary for a two-Higgs shift in broken SU(2)}}
+\hypersetup{pdfauthor={Ming Li},pdftitle={Five-point boundaries for a two-Higgs shift in electroweak amplitudes}}
 \begin{document}
 \begingroup
 \renewcommand{\textasteriskcentered}{\ensuremath{*}}
@@ -23,18 +23,21 @@
 \endgroup
 
 \begin{abstract}
-We compute the boundary at complex infinity of the tree amplitude
-\(W^+W^-W^3hh\) in a broken \(SU(2)\) gauge theory with a single Higgs
-doublet. The deformation shifts the two Higgs momenta by equal and opposite
-null vectors and holds all vector legs fixed. The boundary separates into
-a conserved-current insertion of the four-point two-Higgs tensor and a
-contribution in which the Higgs bosons attach to distinct arms of the
-cubic gauge vertex. We give a closed expression for the latter and a
-necessary and sufficient condition for its cancellation when one vector
-polarization is orthogonal to the shift. The total boundary is generically
-nonzero, as shown by a stationary Higgs pole with nonzero residue. A
-separate calculation in linear \(R_\xi\) gauge shows how the unphysical
-vector and Goldstone poles cancel before the boundary is taken.
+In \(W^+W^-\to Zhh\), the two Higgs bosons can attach to the same
+vector line or to different lines at the cubic gauge vertex. We compute
+the tree-level boundary at complex infinity under a two-Higgs shift
+that preserves the Higgs-pair momentum. The equal-mass broken \(SU(2)\)
+theory exhibits a polarization cancellation of the different-arm
+boundary and allows an explicit check of unphysical-pole cancellation
+in linear \(R_\xi\) gauge. In the electroweak theory the charged
+stationary currents are not conserved, and a term proportional to
+\(m_Z^2-m_W^2\) lifts the different-arm cancellation when one charged
+and the neutral polarization are orthogonal to the shift. The
+cancellation for two shift-orthogonal charged polarizations survives.
+A singlet scalar can add a stationary resonance pole without
+introducing a new different-arm structure. We also give the tree-level
+selection rule for associated production of a single extra vector in
+leptonic \(U(1)'\) extensions.
 \end{abstract}
 
 \section{Introduction}
@@ -58,14 +61,17 @@ for this channel. These results do not give the five-point boundary
 for the specific two-Higgs shift considered here, for which the
 cubic gauge vertex can carry two shifted momenta.
 
-We address that question for \(W^+W^-W^3hh\). All external vector states
-are physical and on shell. We work with three equal vector masses and
-do not introduce hypercharge. The central result is
-Eqs.~\eqref{eq:cross} and \eqref{eq:onezero}, which isolate the part of
-the boundary involving two distinct gauge arms and specify a
-polarization criterion for its cancellation. The separation below
-refers to topology classes in unitary gauge; the full boundary is
-then checked analytically and numerically in linear \(R_\xi\) gauge.
+The physical question is which features of that boundary survive in
+\(W^+W^-\to Zhh\) when the vector masses are split. In particular, can
+a choice of the vector polarizations suppress the diagrams in which
+the two Higgs bosons attach to different gauge arms? We first use
+broken \(SU(2)\) with three equal vector masses to isolate the
+cancellation and check the full tree result in linear \(R_\xi\)
+gauge. We then restore hypercharge and determine which cancellation
+conditions survive. Finally, we distinguish the effect of gauge mass
+splitting from the stationary scalar pole induced by singlet mixing.
+All external vectors are physical and on shell, and the separation
+by topology refers to unitary gauge.
 
 \section{Kinematics and the four-point tensor}
 We take all momenta incoming, with metric \((+---)\). Denote the
@@ -319,16 +325,151 @@ unphysical denominators; this provides a sign and omission check.
 This symbolic reduction uses the derived vertices and does not
 generate the diagrams.
 
+\section{Electroweak \texorpdfstring{\(W^+W^-\to Zhh\)}{W+W- to Zhh}}
+We now restore hypercharge and keep the same deformation. In this
+section \(k_i^2=m_i^2\), with the cyclic order \(+,-,Z\). We remove
+the common \(WWZ\) coupling and overall phase. The \(hV_iV_i\) and
+\(hhV_iV_i\) vertex strengths in the mass basis are \(g_i=2m_i^2/v\)
+and \(d_i=2m_i^2/v^2\), respectively, with the charged fields paired
+at each vertex \cite{Denner}. In unitary gauge the 18 trees still fall
+into the same four classes. A photon does not replace an internal
+neutral vector in these trees because there is no tree-level
+\(hZ\gamma\) or \(hhZ\gamma\) vertex.
+
+\paragraph{Same arm.}
+Let \(D_i(Q)=Q^2-m_i^2\) and
+\(U_i(Q)e=[e-Q(Q\cdot e)/m_i^2]/D_i(Q)\).
+The four-point insertion follows directly from the \(hV_iV_i\)
+and \(hhV_iV_i\) vertices, with both vector indices open before
+contraction. In particular, the contact term is included once and
+no on-shell condition is imposed on the stationary internal vector.
+Polynomial division of its two ordered exchanges yields the boundary
+\begin{equation}
+ X_i=\left(d_i+\frac{3M^2 g_i}{v(H^2-M^2)}\right)e_i
+      -\frac{g_i^2}{m_i^2}\bigl[R_i(2k_i+H)+nF_i\bigr] .
+ \label{eq:ew-x}
+\end{equation}
+The corresponding contribution is obtained by inserting
+\(U_i(K_i)X_i\) into \(V\) with momentum \(K_i=k_i+H\).
+The cubic current \(J_i\), defined by \(V=J_i\cdot e_i\) at the
+stationary vertex, now obeys
+\begin{equation}
+ K_i\cdot J_i=(m_s^2-m_j^2)e_j\cdot e_s.
+ \label{eq:ew-root}
+\end{equation}
+Thus only the neutral root is conserved for general polarizations.
+Replacing \(U_i(K_i)\) by its metric term on a charged root would
+miss \(- (K_i\cdot X_i)(K_i\cdot J_i)/(m_i^2 D_i(K_i))\).
+
+\paragraph{Different arms.}
+Define
+\begin{equation}
+ {\cal C}_{ijs}=R_iR_j(k_i-k_j)\cdot e_s
+            +(n\cdot e_s)(R_jF_i-R_iF_j).
+\end{equation}
+In the first two contractions of Eq.~\eqref{eq:ward}, the terms
+\(-D(L_j)\) and \(D(L_i)\) are replaced by \(m_s^2-L_j^2\)
+and \(L_i^2-m_s^2\), respectively. The double contraction is
+\(-m_s^2 L_i\cdot e_s\). When divided by the propagator
+denominators, the differences \(m_j^2-m_s^2\) and \(m_i^2-m_s^2\)
+in the single contractions give terms of order \(1/z\).
+The products of two longitudinal numerators, together with the
+longitudinal pieces of the single contractions, leave the coefficient
+\((m_i^2+m_j^2-m_s^2)/(m_i^2m_j^2)\) multiplying
+\(\rho_i\rho_j L_i\cdot e_s\). The linear term cancels between
+the two assignments of the Higgs momenta. In contrast to the
+degenerate case, the cyclic sum of the remaining single-ratio
+constants does not vanish. The result is
+\begin{align}
+ B_{\rm cross}^{\rm EW}
+  ={}&\frac{4}{v^2}\sum_{\rm cyc}(m_i^2+m_j^2-m_s^2){\cal C}_{ijs}
+      \nonumber\\
+     &+\frac{8}{v^2}\sum_{\rm cyc}(m_j^2-m_s^2)R_i(e_j\cdot e_s).
+ \label{eq:ew-cross}
+\end{align}
+For equal masses Eq.~\eqref{eq:ew-cross} reduces to
+Eq.~\eqref{eq:cross}. If both charged polarizations are orthogonal to
+\(n\), it vanishes even at \(m_Z\ne m_W\). If instead
+\(n\cdot e_-=n\cdot e_Z=0\), the first line vanishes but the second
+gives
+\begin{equation}
+ B_{\rm cross}^{\rm EW}
+   =-\frac{8(m_Z^2-m_W^2)}{v^2}\,R_+(e_-\cdot e_Z).
+ \label{eq:ew-obstruction}
+\end{equation}
+The example with \(W^+\) and \(Z\) orthogonal follows by interchanging
+the charged legs, with the sign fixed by the cyclic vertex convention.
+The new term is proportional to \(g'^2\), since
+\(m_Z^2-m_W^2=g'^2v^2/4\) at tree level.
+
+As an exact check, choose \(m_W=1\), \(v=2\),
+\(k_+=(3,2,2,0)\), \(k_-=(3,-2,2,0)\), and
+\(k_Z=(-25/6,0,-4,0)\). Set \(p=H/2+(0,1/4,0,0)\), \(r=H-p\)
+and \(n=(0,0,1,i)\), with
+\(e_+=(0,0,0,1)\), \(e_-=(-2/3,1,0,0)\) and \(e_Z=(0,1,0,0)\).
+Here \(m_Z^2=49/36\), both \(e_-\) and \(e_Z\) are orthogonal to
+\(n\), and a direct Laurent expansion of the six different-arm
+graphs gives \(13i/72\), as in Eq.~\eqref{eq:ew-obstruction}.
+The direct sum of the other twelve gives \(-13109i/13200\).
+The separation is a statement about diagram classes in unitary
+gauge under this shift, not a zero of a physical cross section.
+The explicit linear-\(R_\xi\) cancellation in the previous section
+is for the equal-mass theory.
+
+\section{Scalar mixing and a leptonic \texorpdfstring{\(U(1)'\)}{U(1)'}}
+In a real singlet extension, write the doublet fluctuation as
+\(h_D=c_\theta h_1+s_\theta h_2\), where \(h_1\) is the light Higgs.
+The kinetic term rescales each \(h_1VV\) vertex by \(c_\theta\)
+and each \(h_1h_1VV\) vertex by \(c_\theta^2\).
+There is no \(Zh_1h_2\) vertex in this extension. Hence the ordered,
+contact and different-arm terms for \(W^+W^-Zh_1h_1\) are their SM
+counterparts times \(c_\theta^2\). Defining
+\(\lambda_{a11}=\partial_{h_a}\partial_{h_1}^2{\cal V}|_{\rm vac}\)
+for the scalar potential \({\cal V}\), the stationary coefficient
+on arm \(i\) is instead
+\begin{equation}
+ c_\theta^2d_i+
+ g_i\left[
+ \frac{c_\theta\lambda_{111}}{H^2-m_1^2}+
+ \frac{s_\theta\lambda_{211}}{H^2-m_2^2}
+ \right].
+ \label{eq:singlets}
+\end{equation}
+The heavy exchange is a fixed pole because the shift keeps \(H^2\)
+unchanged. Its residue is \(\lambda_{211}\) times the on-shell
+amplitude for \(W^+W^-\to Zh_2\), in the same phase convention.
+In the alignment limit \(c_\theta=1\), \(s_\theta=0\) and
+\(\lambda_{111}=3m_1^2/v\), Eq.~\eqref{eq:singlets}
+returns the SM. The resonant production mechanism is known
+\cite{Kotwal}; the point here is that the resonance belongs entirely
+to the boundary, without changing the different-arm polarization
+criterion.
+
+The same tree-level separation applies to vector and axial-vector
+\(L_\mu-L_\tau\) realizations in which the electroweak doublet is
+neutral under \(U(1)'\), one electroweak singlet breaks \(U(1)'\),
+and there is no tree-level kinetic mixing. The radial singlet
+mixes via \(H^\dagger H|S|^2\), so it can contribute the pole in
+Eq.~\eqref{eq:singlets}. In unitary gauge the bosonic vertices are
+even in the new vector \(A'\), so the amplitude for
+\(W^+W^-\to A'h_1h_1\) vanishes at tree level even with scalar
+mixing. Internal fermions with no external fermion legs would form
+a loop. Nonzero hypercharge kinetic mixing relaxes this selection
+rule by inducing both \(WWA'\) and mixed neutral Higgs--vector
+vertices \cite{Curtin}. The statement in its absence does not
+constrain the complete one-loop amplitude.
+
 \section{Conclusions}
-The boundary of this two-Higgs deformation is not fixed solely by
-inserting the four-point tensor. The contribution from emissions on
-distinct gauge arms admits the closed form in Eq.~\eqref{eq:cross}
-and the sharper cancellation criterion in Eq.~\eqref{eq:onezero}.
-A stationary physical pole nevertheless obstructs a boundary-free
-formula for general polarizations. These results apply to the
-specified scalar shift and the equal-mass broken \(SU(2)\) theory;
-they do not change constructibility under an all-line transverse
-shift or impose a condition on a general off-shell vector current.
+For the fixed-pair-momentum shift, the different-arm boundary is not
+captured by inserting a four-point tensor on a single gauge arm. The
+equal-mass result gives a polarization cancellation that is only
+partly inherited by \(W^+W^-\to Zhh\): the zero for both charged
+polarizations orthogonal to the shift survives, but the mixed
+charged--neutral case acquires a mass-splitting term. Singlet mixing,
+by contrast, rescales the different-arm term and can add a fixed
+scalar pole. These results distinguish vector-mass and scalar-pole
+effects for the specified shift. They do not constrain constructibility
+under an all-line transverse deformation or imply a cross-section zero.
 
 \section*{Data availability}
 No external datasets were used. The scripts and benchmark outputs
@@ -383,5 +524,13 @@ Comput. Phys. Commun. \textbf{306} (2025) 109357,
 \href{https://doi.org/10.1016/j.cpc.2024.109357}{doi:10.1016/j.cpc.2024.109357}.
 \bibitem{FeynCalc102} V. Shtabovenko,
 \href{https://arxiv.org/abs/2512.19858}{arXiv:2512.19858}.
+\bibitem{Denner} A. Denner, Fortschr. Phys. \textbf{41} (1993) 307--420,
+\href{https://arxiv.org/abs/0709.1075}{arXiv:0709.1075}.
+\bibitem{Kotwal} A. V. Kotwal, M. J. Ramsey-Musolf, J. M. No and P. Winslow,
+Phys. Rev. D \textbf{94} (2016) 035022,
+\href{https://arxiv.org/abs/1605.06123}{arXiv:1605.06123}.
+\bibitem{Curtin} D. Curtin, R. Essig, S. Gori and J. Shelton,
+JHEP \textbf{02} (2015) 157,
+\href{https://arxiv.org/abs/1412.0018}{arXiv:1412.0018}.
 \end{thebibliography}
 \end{document}
