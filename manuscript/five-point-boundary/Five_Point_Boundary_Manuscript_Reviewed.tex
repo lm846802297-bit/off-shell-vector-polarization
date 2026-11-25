@@ -40,14 +40,23 @@ vector and Goldstone poles cancel before the boundary is taken.
 \section{Introduction}
 A complex deformation of external momenta reconstructs a tree amplitude
 from its moving poles only if the contribution at infinity vanishes
-\cite{BCFW}. The extension to massive gauge bosons depends on the
-deformation and on the external polarization data. Massive--massless
-shifts and all-line transverse shifts give distinct constructions
-\cite{BallavManna,Franken,Ema,Ke}. Boundary-operator methods provide a separate way to compute contributions not captured by moving poles \cite{Jin}. The four-point amplitude \(W^+W^-hh\), including
-the local term and the Higgs exchange, is known \cite{Balkin}. This
-four-point result by itself does not determine how the large-deformation
-limit is shared among the diagrams of a five-point amplitude whose cubic
-gauge vertex can carry two shifted momenta.
+\cite{BCF,BCFW}. Nonvanishing boundary contributions have been
+computed for scalar and Yukawa theories \cite{FengBoundary}, and
+boundary operators provide a systematic approach \cite{Jin}.
+For massive gauge amplitudes, constructibility depends on both the
+deformation and the external polarization. Massive--massless shifts,
+massive two-line shifts and all-line transverse shifts illustrate
+different choices \cite{BallavManna,Franken,EmaMomentum,Ema}.
+The use of on-shell recursion for off-shell polarization continuation
+is discussed in Ref.~\cite{Ke}. For the broken \(SU(2)\) gauge--Higgs
+sector, colour-ordered tree currents can be constructed by
+Berends--Giele recursion in unitary gauge \cite{Dai}.
+At four points, the \(W^+W^-hh\) amplitude, including Higgs exchange
+and the local term, is known \cite{Aoude,Balkin}. Reference~\cite{Aoude}
+also notes that a BCFW deformation can have poor large-\(z\) behaviour
+for this channel. These results do not give the five-point boundary
+for the specific two-Higgs shift considered here, for which the
+cubic gauge vertex can carry two shifted momenta.
 
 We address that question for \(W^+W^-W^3hh\). All external vector states
 are physical and on shell. We work with three equal vector masses and
@@ -303,7 +312,7 @@ absolute reference and the sum of absolute values of the separately
 computed contributions. The small residuals reflect floating-point
 contour evaluation rather than a nonzero analytic residue.
 Independently, exact scalar-product reductions in FeynCalc
-10.2.1 (development version) \cite{FeynCalc} reproduce the cubic
+10.2.1 (development version) \cite{FeynCalc,FeynCalc102} reproduce the cubic
 contractions and the cancellations above. Removing the
 two-Goldstone graph leaves a nonzero numerator over the
 unphysical denominators; this provides a sign and omission check.
@@ -329,23 +338,39 @@ available in the \href{https://github.com/lm846802297-bit/off-shell-vector-polar
 % Before submission, insert author-confirmed funding and competing-interest
 % declarations as applicable, and the required generative-AI disclosure
 % before the references. See Author_Preflight.md in the source bundle.
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
+\setlength{\itemsep}{0pt}
+\setlength{\parsep}{0pt}
+\bibitem{BCF} R. Britto, F. Cachazo and B. Feng,
+Nucl. Phys. B \textbf{715} (2005) 499--522,
+\href{https://arxiv.org/abs/hep-th/0412308}{arXiv:hep-th/0412308}.
 \bibitem{BCFW} R. Britto, F. Cachazo, B. Feng and E. Witten,
 Phys. Rev. Lett. \textbf{94} (2005) 181602,
 \href{https://arxiv.org/abs/hep-th/0501052}{arXiv:hep-th/0501052}.
+\bibitem{FengBoundary} B. Feng, J. Wang, Y. Wang and Z. Zhang,
+JHEP \textbf{01} (2010) 019,
+\href{https://arxiv.org/abs/0911.0301}{arXiv:0911.0301}.
+\bibitem{Jin} Q. Jin and B. Feng, JHEP \textbf{04} (2016) 123,
+\href{https://arxiv.org/abs/1507.00463}{arXiv:1507.00463}.
 \bibitem{BallavManna} S. Ballav and A. Manna, Nucl. Phys. B
 \textbf{983} (2022) 115935,
 \href{https://arxiv.org/abs/2109.06546}{arXiv:2109.06546}.
 \bibitem{Franken} R. Franken and C. Schwinn,
 JHEP \textbf{02} (2020) 073,
 \href{https://arxiv.org/abs/1910.13407}{arXiv:1910.13407}.
+\bibitem{EmaMomentum} Y. Ema, T. Gao, W. Ke, Z. Liu, K.-F. Lyu and I. Mahbub,
+\href{https://arxiv.org/abs/2403.15538}{arXiv:2403.15538}.
 \bibitem{Ema} Y. Ema, T. Gao, W. Ke, Z. Liu, K.-F. Lyu and I. Mahbub,
 Phys. Rev. D \textbf{110} (2024) 105002,
 \href{https://arxiv.org/abs/2407.14587}{arXiv:2407.14587}.
 \bibitem{Ke} W. Ke, Z. Liu and I. Mahbub,
 \href{https://arxiv.org/abs/2611.13096}{arXiv:2611.13096}.
-\bibitem{Jin} Q. Jin and B. Feng, JHEP \textbf{04} (2016) 123,
-\href{https://arxiv.org/abs/1507.00463}{arXiv:1507.00463}.
+\bibitem{Dai} L. Dai, K. Melnikov and F. Caola,
+JHEP \textbf{04} (2012) 095,
+\href{https://arxiv.org/abs/1201.1523}{arXiv:1201.1523}.
+\bibitem{Aoude} R. Aoude and C. S. Machado,
+JHEP \textbf{12} (2019) 058,
+\href{https://arxiv.org/abs/1905.11433}{arXiv:1905.11433}.
 \bibitem{Balkin} R. Balkin, G. Durieux, T. Kitahara, Y. Shadmi and
 Y. Weiss, JHEP \textbf{03} (2022) 129,
 \href{https://arxiv.org/abs/2112.09688}{arXiv:2112.09688}.
@@ -356,5 +381,7 @@ Eur. Phys. J. C \textbf{83} (2023) 922,
 V. Shtabovenko, R. Mertig and F. Orellana,
 Comput. Phys. Commun. \textbf{306} (2025) 109357,
 \href{https://doi.org/10.1016/j.cpc.2024.109357}{doi:10.1016/j.cpc.2024.109357}.
+\bibitem{FeynCalc102} V. Shtabovenko,
+\href{https://arxiv.org/abs/2512.19858}{arXiv:2512.19858}.
 \end{thebibliography}
 \end{document}
