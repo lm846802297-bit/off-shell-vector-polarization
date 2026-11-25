@@ -109,10 +109,31 @@ removed from the amplitudes with three vector legs, use
  V(k;e)&=\sum_{(i,j,s)\,\mathrm{cyc}}
        (e_i\cdot e_j)(k_i-k_j)\cdot e_s .
 \end{align}
-The tensor version of the four-point amplitude in Ref.~\cite{Balkin}
-contains two ordered vector exchanges and two shift-stationary
-contributions. For the exchange with \(L=k+x\), where \(x=p,r\) and
-\(\sg_x=+1,-1\), take external vector arguments \(u,w\). Define
+We construct the amputated four-point current directly in unitary
+gauge. The relevant terms in the Lagrangian are
+\[
+ {\cal L}\supset \frac{m^2}{2}(1+h/v)^2 W_\mu^a W^{a\mu}
+                  -\frac{M^2}{2v}h^3 .
+\]
+Take \(k\) on shell and let the other vector carry incoming momentum
+\(-K=-(k+H)\), without imposing \(K^2=m^2\). Put \(p_z=p+zn\),
+\(r_z=r-zn\), and \(L_x(z)=k+x_z\) for \(x=p,r\). With the adjoint
+Kronecker delta and overall phase suppressed, the current is
+\begin{equation}
+ T_{\mu\nu}(z)=C_0g_{\mu\nu}
+  +g_h^2\sum_{x=p,r}
+  \frac{g_{\mu\nu}-L_{x\mu}(z)L_{x\nu}(z)/m^2}{D(L_x(z))}.
+ \label{eq:amputated-current}
+\end{equation}
+The two terms in \(C_0\), given below, come from the \(WWhh\)
+vertex and the \(h^*\to hh\) graph. No propagator of momentum \(K\)
+is included in \(T_{\mu\nu}\). Imposing \(K^2=m^2\) and contracting
+with physical polarizations instead gives the on-shell four-point
+amplitude \cite{Balkin}; that amplitude is not used to choose the
+off-shell current.
+
+For the exchange with \(L=k+x\) and \(\sg_x=+1,-1\), take
+vector arguments \(u,w\). Define
 \(d=2k\cdot n\), \(N=u\cdot n\), \(P=w\cdot n\), \(X=u\cdot L\),
 and \(Y=w\cdot L\). Polynomial division gives
 \begin{equation}
@@ -147,11 +168,31 @@ respectively; the momentum of \(h^*\) is \(H=p+r\).}
 For each gauge arm
 there are two ordered emissions, one seagull and one virtual Higgs
 splitting. The six remaining trees place the Higgs bosons on two
-distinct arms. For the first 12 diagrams the cubic current \(J_i\)
-of the other two physical vectors is conserved at \(K_i=k_i+H\):
-\(K_i\cdot J_i=0\). This follows directly by contraction of \(V\)
-and use of equal masses. The full four-point tensor can therefore
-be inserted with \(u=e_i\) and \(w=J_i/D(K_i)\). In particular, set
+distinct arms. The four terms of Eq.~\eqref{eq:amputated-current},
+attached to arm \(i\), account for precisely the four diagrams on
+that arm. Their contribution at finite \(z\) is
+\begin{equation}
+ e_i^\mu T_{\mu\nu}(z)\,[U(K_i)J_i]^\nu,\qquad K_i=k_i+H ,
+ \label{eq:current-sewing}
+\end{equation}
+where \(J_i\) is the cubic current of the other two physical vectors.
+Contracting \(V\) gives \(K_i\cdot J_i=0\) for equal masses, so
+\([U(K_i)J_i]^\nu=J_i^\nu/D(K_i)\) in this case. It does not put
+\(K_i\) on shell.
+
+Matching only to the on-shell amplitude would allow adding \(D(K_i)Y_{\mu\nu}\) to
+\(T_{\mu\nu}\), with \(Y_{\mu\nu}\) regular at the root pole.
+It would leave the on-shell four-point amplitude unchanged but
+change Eq.~\eqref{eq:current-sewing} by
+\(e_i^\mu Y_{\mu\nu}(g^{\nu\rho}-K_i^\nu K_i^\rho/m^2)J_{i\rho}\).
+This term is regular at the root pole and does not vanish in
+general, even when \(K_i\cdot J_i=0\). No such addition is made:
+the fixed Lagrangian specifies the current, its quartic contact
+is included once, and the six distinct-arm graphs are evaluated
+separately. An off-shell rearrangement would have to retain any
+compensating contact contributions in the full amplitude.
+
+For the constant term set
 \begin{equation}
  R_i=\frac{n\cdot e_i}{\ell_i},\qquad
  F_i=\frac{H\cdot e_i-2R_i(M^2+k_i\cdot H)}{\ell_i},\qquad
