@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "run_manifest",
+  "run_id": "20261125-su2-charged-rxi-gauge-check",
+  "created_at": "2026-11-25T18:17:36.786942+00:00",
+  "project": {
+    "project_id": "off-shell-vector-polarization",
+    "repository": "lm846802297-bit/off-shell-vector-polarization"
+  },
+  "source": {
+    "commit_sha": "4afc7a192f49ecc22cf1f1b5fd33f2aafceb3253",
+    "script_path": "research-baselines/su2-charged-fivepoint-boundary/rxigauge_check.py",
+    "script_sha256": "15aa9ea52faa9bf9124fa038dd5b7f325b0f00796f2c20aca2e069033d154636"
+  },
+  "inputs": [
+    {
+      "name": "Pinned unitary reference and seeded kinematic fixtures",
+      "source": "lm846802297-bit/off-shell-vector-polarization",
+      "version": "4afc7a192f49ecc22cf1f1b5fd33f2aafceb3253",
+      "format": "python",
+      "path": "research-baselines/su2-charged-fivepoint-boundary/charged.py",
+      "sha256": "e01725c5ec38cdb9510a0b99541acd14a279e7e0511193d6d7465aed9c615a17",
+      "bytes": 11278
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "model": "single-doublet broken SU(2); degenerate vectors; linear Rxi compared with unitary gauge"
+    },
+    "numerics": {
+      "m": 1,
+      "M": 0.79,
+      "g2": 0.62,
+      "rng_seed": 2026112518,
+      "xi": [
+        0.31,
+        1.7,
+        4.2
+      ],
+      "tolerance": 1e-08
+    },
+    "conventions": {
+      "signature": "+---",
+      "complex_contractions": "bilinear"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "engine": "CPython",
+      "version": "3.12.14"
+    },
+    "dependencies": {
+      "numpy": "2.3.5"
+    },
+    "hardware": {
+      "architecture": "x86_64"
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "command": "OPENBLAS_NUM_THREADS=1 python rxigauge_check.py > rxi-results.json",
+    "started_at": null,
+    "finished_at": null,
+    "exit_code": 0,
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "unknown",
+      "working_tree_state": "unknown",
+      "dirty_paths": [],
+      "checkout_ref": null,
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "research-baselines/su2-charged-fivepoint-boundary/rxi-results.json",
+      "role": "native",
+      "format": "json",
+      "sha256": "f4ac00a8869216f623eb33c6c5ee3f18703c6940293d88aa034622da714a4508",
+      "bytes": 449901
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "check-1",
+        "name": "Cartesian finite-gauge census: 18 vector, six single and six double Goldstone trees",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-2",
+        "name": "Analytic cancellation at finite complex shift in the full amplitude",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-3",
+        "name": "144 finite amplitudes, 36 outer contours, 216 physical and 216 candidate unphysical residues",
+        "category": "independent",
+        "status": "passed"
+      }
+    ]
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "record_type": "task_provenance",
+      "provenance_version": "1.0.0",
+      "task_id": "20261125-su2-charged-rxi-gauge-check",
+      "repository": "lm846802297-bit/off-shell-vector-polarization",
+      "task_brief_path": "research/task_briefs/20261125-su2-charged-rxi-gauge-check.md",
+      "task_brief_sha256": "8007a7b25f5d74ba5700d8ced74b856b71756097ff04d73e33bf3096281a7403",
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "88beb8ffbd806c961bed59216d361c25d21a0253cdda3f2cb29a118a0cc3644c",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1",
+        "git-review-and-merge"
+      ],
+      "project_extensions": [
+        {
+          "path": "AGENTS.md",
+          "scope": "Off-shell boundary and analytic physical-state constraints",
+          "sha256": "0aa425ea552f8479e945420668162b4e565dc4ff0f97aef2af25615fe7736642"
+        }
+      ],
+      "acceptance_criteria": [
+        "Cartesian finite-gauge census: 18 vector, six single and six double Goldstone trees",
+        "Analytic cancellation at finite complex shift in the full amplitude",
+        "144 finite amplitudes, 36 outer contours, 216 physical and 216 candidate unphysical residues"
+      ]
+    },
+    "source_identity_note": "Parent identifies the checked charged baseline; new finite-gauge script identity is its own SHA-256 before Git creation."
+  }
+}
