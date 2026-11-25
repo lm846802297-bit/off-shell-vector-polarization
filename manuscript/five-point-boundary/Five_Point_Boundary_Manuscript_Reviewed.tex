@@ -1,0 +1,358 @@
+% Tested with pdfTeX in PDF mode.
+\ifdefined\pdfoutput\pdfoutput=1\fi
+\documentclass[11pt,a4paper]{article}
+\usepackage[hmargin=28mm,vmargin=23mm]{geometry}
+% Keep the first paragraph after a displayed section heading indented.
+\usepackage{indentfirst}
+\setlength{\parindent}{1.5em}
+\usepackage{amsmath,amssymb,graphicx,booktabs}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\sg}{\sigma}
+\newcommand{\bc}{B_{\infty}}
+\title{The five-point boundary for a two-Higgs shift in broken \(SU(2)\)}
+\author{} % Author names and affiliations to be supplied by the author.
+\date{}
+\hypersetup{pdftitle={The five-point boundary for a two-Higgs shift in broken SU(2)}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We compute the boundary at complex infinity of the tree amplitude
+\(W^+W^-W^3hh\) in a broken \(SU(2)\) gauge theory with a single Higgs
+doublet. The deformation shifts the two Higgs momenta by equal and opposite
+null vectors and holds all vector legs fixed. The boundary separates into
+a conserved-current insertion of the four-point two-Higgs tensor and a
+contribution in which the Higgs bosons attach to distinct arms of the
+cubic gauge vertex. We give a closed expression for the latter and a
+necessary and sufficient condition for its cancellation when one vector
+polarization is orthogonal to the shift. The total boundary is generically
+nonzero, as shown by a stationary Higgs pole with nonzero residue. A
+separate calculation in linear \(R_\xi\) gauge shows how the unphysical
+vector and Goldstone poles cancel before the boundary is taken.
+\end{abstract}
+
+\section{Introduction}
+A complex deformation of external momenta reconstructs a tree amplitude
+from its moving poles only if the contribution at infinity vanishes
+\cite{BCFW}. The extension to massive gauge bosons depends on the
+deformation and on the external polarization data. Massive--massless
+shifts and all-line transverse shifts give distinct constructions
+\cite{BallavManna,Franken,Ema,Ke}. Boundary-operator methods provide a separate way to compute contributions not captured by moving poles \cite{Jin}. The four-point amplitude \(W^+W^-hh\), including
+the local term and the Higgs exchange, is known \cite{Balkin}. This
+four-point result by itself does not determine how the large-deformation
+limit is shared among the diagrams of a five-point amplitude whose cubic
+gauge vertex can carry two shifted momenta.
+
+We address that question for \(W^+W^-W^3hh\). All external vector states
+are physical and on shell. We work with three equal vector masses and
+do not introduce hypercharge. The central result is
+Eqs.~\eqref{eq:cross} and \eqref{eq:onezero}, which isolate the part of
+the boundary involving two distinct gauge arms and specify a
+polarization criterion for its cancellation. The separation below
+refers to topology classes in unitary gauge; the full boundary is
+then checked analytically and numerically in linear \(R_\xi\) gauge.
+
+\section{Kinematics and the four-point tensor}
+We take all momenta incoming, with metric \((+---)\). Denote the
+three vector momenta and polarizations by \(k_i,e_i\), with
+\(k_i^2=m^2\) and \(k_i\cdot e_i=0\), and the two Higgs momenta by
+\(p,r\), with \(p^2=r^2=M^2\). Write \(H=p+r=-\sum_i k_i\).
+The deformation is
+\begin{equation}
+ p(z)=p+zn,\qquad r(z)=r-zn,\qquad
+ n^2=n\cdot p=n\cdot r=0.                                    \label{eq:shift}
+\end{equation}
+All contractions are bilinear also at complex momenta. We assume
+generic kinematics with \(\ell_i=2k_i\cdot n\ne0\) and separated poles.
+The boundary is the coefficient of \(z^0\) in the Laurent expansion
+of \(A(z)\) at infinity. By Cauchy's theorem,
+\begin{equation}
+ A(0)=-\sum_{z_\alpha\ne0}\operatorname{Res}_{z=z_\alpha}
+                 \frac{A(z)}{z}+B_\infty .
+ \label{eq:cauchy}
+\end{equation}
+The sum is over the finite moving poles. The shift preserves \(H^2\),
+so the boundary need not be local in all invariants.
+
+Let \(a=g_2/2\), \(v=m/a\), \(g_h=2am\), and \(g_{hh}=2a^2\).
+With the common cubic factor \(g_2 f^{abc}\) and overall phase
+removed from the amplitudes with three vector legs, use
+\begin{align}
+ D(Q)&=Q^2-m^2, &
+ U(Q)e&=\frac{e-Q(Q\cdot e)/m^2}{D(Q)},\\
+ V(k;e)&=\sum_{(i,j,s)\,\mathrm{cyc}}
+       (e_i\cdot e_j)(k_i-k_j)\cdot e_s .
+\end{align}
+The tensor version of the four-point amplitude in Ref.~\cite{Balkin}
+contains two ordered vector exchanges and two shift-stationary
+contributions. For the exchange with \(L=k+x\), where \(x=p,r\) and
+\(\sg_x=+1,-1\), take external vector arguments \(u,w\). Define
+\(d=2k\cdot n\), \(N=u\cdot n\), \(P=w\cdot n\), \(X=u\cdot L\),
+and \(Y=w\cdot L\). Polynomial division gives
+\begin{equation}
+ \frac{A_x(z)}{g_h^2}=
+ -\frac{\sg_x NP}{m^2d}\,z
+ +\frac{1}{m^2}\left[\frac{NP D(L)}{d^2}
+                     -\frac{NY+PX}{d}\right]+O(z^{-1}) .
+ \label{eq:division}
+\end{equation}
+The leading powers of the two exchanges cancel. The contact and
+Higgs-pole terms are
+\(C_0\,u\cdot w\), where
+\begin{equation}
+ C_0=g_{hh}+\frac{g_h(3M^2/v)}{H^2-M^2}.
+ \label{eq:c0}
+\end{equation}
+Only the first term is local in \(H^2\).
+
+\section{Five-point boundary and polarization condition}
+There are 18 labelled trees in unitary gauge (Fig.~\ref{fig:topologies}).
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth]{charged_topologies.pdf}
+\caption{Representative five-point trees in unitary gauge:
+(a) same-arm ordered emission, (b) cross-arm emission,
+(c) quartic \(WWhh\) vertex, and (d) virtual Higgs splitting.
+The corresponding numbers of labelled trees are \(6,6,3,3\).
+The dashed lines labelled \(h_p,h_r\) carry \(p+zn,r-zn\),
+respectively; the momentum of \(h^*\) is \(H=p+r\).}
+\label{fig:topologies}
+\end{figure}
+For each gauge arm
+there are two ordered emissions, one seagull and one virtual Higgs
+splitting. The six remaining trees place the Higgs bosons on two
+distinct arms. For the first 12 diagrams the cubic current \(J_i\)
+of the other two physical vectors is conserved at \(K_i=k_i+H\):
+\(K_i\cdot J_i=0\). This follows directly by contraction of \(V\)
+and use of equal masses. The full four-point tensor can therefore
+be inserted with \(u=e_i\) and \(w=J_i/D(K_i)\). In particular, set
+\begin{equation}
+ R_i=\frac{n\cdot e_i}{\ell_i},\qquad
+ F_i=\frac{H\cdot e_i-2R_i(M^2+k_i\cdot H)}{\ell_i},\qquad
+ S_i=-\frac{R_i(2k_i+H)+nF_i}{m^2}.
+\end{equation}
+The same-arm and stationary boundary is a sum over arms of
+\(V\) with momentum \(K_i\) and argument
+\(U(K_i)(C_0e_i+g_h^2 S_i)\) on the indicated arm.
+
+For a cross-arm assignment write
+\(L_i=k_i+x+wn\), \(L_j=k_j+y-wn\) and \(b_i=L_i\cdot e_i\),
+\(b_j=L_j\cdot e_j\), where \((x,y,w)=(p,r,z)\) or \((r,p,-z)\).
+The contraction of the cubic vertex with \(L_i\) or \(L_j\) gives
+\begin{align}
+ V(L_i,L_j,k_s;L_i,e_j,e_s)
+   &=-D(L_j)e_j\cdot e_s-b_jL_i\cdot e_s,\\
+ V(L_i,L_j,k_s;e_i,L_j,e_s)
+   &= D(L_i)e_i\cdot e_s-b_iL_i\cdot e_s,\\
+ V(L_i,L_j,k_s;L_i,L_j,e_s)&=-m^2L_i\cdot e_s .
+ \label{eq:ward}
+\end{align}
+Writing \(\rho_i=b_i/D(L_i)\), \(\rho_j=b_j/D(L_j)\), the
+cross-arm term for one assignment is \(g_h^2\) times
+\begin{equation}
+ \frac{V(L_i,L_j,k_s;e_i,e_j,e_s)}{D(L_i)D(L_j)}
+ +\frac{\rho_i e_j\cdot e_s-\rho_j e_i\cdot e_s
+            +\rho_i\rho_j L_i\cdot e_s}{m^2}.
+ \label{eq:cross-rational}
+\end{equation}
+The first term is \(O(z^{-1})\). On the \(i\)-th arm,
+\(\rho_i=R_i+[(k_i+x)\cdot e_i-R_i D(k_i+x)]/(w\ell_i)+O(w^{-2})\);
+the corresponding formula on the \(j\)-th arm uses \(-w\) and \(y\).
+The \(O(w)\) terms from the last term in Eq.~\eqref{eq:cross-rational}
+cancel upon exchanging the two Higgs attachments. The single-ratio
+constants cancel in the cyclic sum. Combining the remaining constants
+gives
+\begin{equation}
+ B_{\mathrm{cross}}=\frac{g_h^2}{m^2}
+ \sum_{(i,j,s)\,\mathrm{cyc}}\!
+ \left[R_iR_j(k_i-k_j)\cdot e_s+
+        (n\cdot e_s)(R_jF_i-R_iF_j)\right].
+ \label{eq:cross}
+\end{equation}
+This term requires no independent five-point interaction.
+
+If \(n\cdot e_s=0\), the cyclic sum simplifies further:
+\begin{equation}
+ B_{\mathrm{cross}}=
+ -\frac{2g_h^2 R_iR_j}{m^2\ell_s}
+  e_s\cdot (\ell_j k_i-\ell_i k_j).
+ \label{eq:onezero}
+\end{equation}
+Thus two shift-orthogonal polarizations are sufficient, but not
+necessary. If exactly one is orthogonal, cancellation is equivalent
+to the vanishing of the remaining contraction in Eq.~\eqref{eq:onezero}.
+For generic momenta this selects a line in the two-dimensional
+complex plane \(k_s^\perp\cap n^\perp\). This is not in general a
+statement about a real linear polarization or a helicity eigenstate. As an exact check, set
+\(m=g_2=1\) and choose
+\[
+\begin{aligned}
+ k_1&=(3,2,2,0), & k_2&=(3,-2,2,0), &
+ k_s&=(-\sqrt{17},0,-4,0),\\
+ p&=H/2+(0,1/2,0,0), & r&=H-p, & n&=(0,0,1,i).
+\end{aligned}
+\]
+Here \(M^2=p^2=r^2\) and \(s=3\).
+For \(e_1=e_2=(0,0,0,1)\), choosing \(e_s=(0,1,0,0)\)
+gives \(B_{\mathrm{cross}}=1/4\) in the stripped amplitude.
+With the same momenta and \(e_1,e_2\), the complex physical
+polarization \(e_s=(4,0,\sqrt{17},i\sqrt{17})\) gives zero;
+neither \(n\cdot e_1\) nor \(n\cdot e_2\) vanishes.
+The zero is unchanged by normalizing the polarization.
+
+The condition on the cross contribution does not remove the
+stationary Higgs pole. In the full boundary,
+\begin{equation}
+ \mathop{\rm Res}_{H^2=M^2}\bc
+    =\frac{3M^2}{v} A_4(W^+W^-W^3h).
+\end{equation}
+The right-hand side does not vanish identically. For example, at
+right-angle two-body kinematics with the initial vector momenta
+along the \(z\) axis, choose the two initial polarizations along
+\(y\) and the final vector polarization along \(z\). The reduced
+four-point amplitude is \(2g_h|\boldsymbol{k}_1|
+\sum_i D(K_i)^{-1}\). At large initial-vector energy \(E\),
+the sum is \(-3/(4E^2)+O(E^{-4})\), so the residue is not identically
+zero. The pole
+statement is analytic; it does not require a real \(h\to hh\) decay.
+For fixed regular kinematics the moving poles alone reconstruct
+the amplitude precisely when \(B_{\rm same}+B_{\rm cross}=0\).
+As a check of the sign in Eq.~\eqref{eq:cauchy}, we computed the six
+moving residues for each of 20 phase-space points and both null
+directions, using the three physical intermediate spin states.
+Across these 40 deformations the largest scaled reconstruction
+difference with the boundary included was \(7.84\times10^{-15}\)
+\cite{Archive}.
+
+\section{Cancellation of the gauge poles}
+\label{sec:gauge}
+Use a Cartesian Higgs doublet
+\(\Phi=(v+h+i\chi^a\sigma^a)(0,1)^T/\sqrt 2\) and
+\(D_\mu=\partial_\mu-iaW_\mu^a\sigma^a\).
+The gauge-fixing function is
+\(F^a=\partial\cdot W^a+\xi m\chi^a\).
+The derivative interactions needed in addition to the unitary-gauge
+vertices are
+\begin{equation}
+ aW_\mu^a(\chi^a\partial^\mu h-h\partial^\mu\chi^a)
+ +a\epsilon^{abc}W_\mu^a\chi^b\partial^\mu\chi^c.
+ \label{eq:gold}
+\end{equation}
+There is no \(WW\chi\) vertex. With no external ghosts, ghost-number
+flow would require a closed ghost line, so ghosts do not occur
+in this tree amplitude.
+
+Let \(E(Q)=Q^2-\xi m^2\). With the factor \(-i\) removed from
+the vector propagator, its finite-gauge form is
+\begin{equation}
+ U_\xi(Q)=U(Q)+\frac{QQ}{m^2 E(Q)}.
+\end{equation}
+On a stationary root \(K_i\) the difference vanishes after
+contraction with \(J_i\). For an ordered same-arm emission it
+adds a longitudinal term proportional to
+\[
+ \frac{g_h^2(L\cdot e_i)(L\cdot J_i)}{m^2 E(L)D(K_i)} .
+\]
+The derivative \(Wh\chi\) vertices in Eq.~\eqref{eq:gold} give
+the negative of this term, since \(g_h/m=2a\).
+This accounts for the six single-Goldstone trees.
+
+For a cross-arm assignment, use
+Eqs.~\eqref{eq:ward} to expand the difference between
+\(U_\xi(L_i)U_\xi(L_j)\) and \(U(L_i)U(L_j)\).
+Suppressing the overall \(g_h^2/m^2\), the difference is
+\begin{equation}
+ -\frac{b_i}{E(L_i)} e_j\cdot e_s
+ +\frac{b_j}{E(L_j)} e_i\cdot e_s
+ -\frac{b_i b_j}{E(L_i)E(L_j)}L_i\cdot e_s .
+ \label{eq:difference}
+\end{equation}
+The last term cancels the tree with two Goldstone lines joining a
+\(W\chi\chi\) vertex. The first two terms cancel after summing attachments:
+for each fixed Higgs and arm, its two possible partners give the same
+factor with opposite sign. The proof holds at finite complex \(z\),
+so the full shifted amplitudes agree as rational functions. Their
+boundary coefficients and physical poles agree, and the poles at
+\(L_i^2=\xi m^2\) are removable. The statement concerns the full
+amplitude; the separate diagrams are gauge dependent.
+The usual vector--Goldstone relation is discussed in
+Ref.~\cite{Chen}; the explicit cancellation above also exhibits the
+role of the cyclic sum.
+
+We checked this result by independently enumerating labelled trees
+from the Cartesian action and evaluating the standard finite-
+\(\xi\) propagator without making a unitary subtraction. The recursion
+generates 18 trees with no Goldstone line, six with one, and six
+with two. For six real phase-space points, both null shifts and
+\(\xi=0.31,1.7,4.2\), we compared the signed amplitude at finite
+\(z\), the coefficient at infinity, and the six physical and six
+candidate unphysical residues. The tests include external longitudinal
+polarization and retain the separately nonzero Goldstone and vector
+pieces in the archived data. The largest scaled discrepancies are
+\(2.36\times 10^{-14}\) for the finite-shift amplitude,
+\(3.22\times 10^{-15}\) for the boundary and
+\(4.26\times 10^{-10}\) for the physical residues. The largest
+scaled residue at an unphysical pole is \(4.64\times 10^{-10}\).
+The scale in each comparison is the largest of unity, the
+absolute reference and the sum of absolute values of the separately
+computed contributions. The small residuals reflect floating-point
+contour evaluation rather than a nonzero analytic residue.
+Independently, exact scalar-product reductions in FeynCalc
+10.2.1 (development version) \cite{FeynCalc} reproduce the cubic
+contractions and the cancellations above. Removing the
+two-Goldstone graph leaves a nonzero numerator over the
+unphysical denominators; this provides a sign and omission check.
+This symbolic reduction uses the derived vertices and does not
+generate the diagrams.
+
+\section{Conclusions}
+The boundary of this two-Higgs deformation is not fixed solely by
+inserting the four-point tensor. The contribution from emissions on
+distinct gauge arms admits the closed form in Eq.~\eqref{eq:cross}
+and the sharper cancellation criterion in Eq.~\eqref{eq:onezero}.
+A stationary physical pole nevertheless obstructs a boundary-free
+formula for general polarizations. These results apply to the
+specified scalar shift and the equal-mass broken \(SU(2)\) theory;
+they do not change constructibility under an all-line transverse
+shift or impose a condition on a general off-shell vector current.
+
+\section*{Data availability}
+No external datasets were used. The scripts and benchmark outputs
+for the phase-space and contour checks are available in Ref.~\cite{Archive}.
+
+% Before submission, insert author-confirmed funding and competing-interest
+% declarations as applicable, and the required generative-AI disclosure
+% before the references. See Author_Preflight.md in the source bundle.
+\begin{thebibliography}{10}
+\bibitem{BCFW} R. Britto, F. Cachazo, B. Feng and E. Witten,
+Phys. Rev. Lett. \textbf{94} (2005) 181602,
+\href{https://arxiv.org/abs/hep-th/0501052}{arXiv:hep-th/0501052}.
+\bibitem{BallavManna} S. Ballav and A. Manna, Nucl. Phys. B
+\textbf{983} (2022) 115935,
+\href{https://arxiv.org/abs/2109.06546}{arXiv:2109.06546}.
+\bibitem{Franken} R. Franken and C. Schwinn,
+JHEP \textbf{02} (2020) 073,
+\href{https://arxiv.org/abs/1910.13407}{arXiv:1910.13407}.
+\bibitem{Ema} Y. Ema, T. Gao, W. Ke, Z. Liu, K.-F. Lyu and I. Mahbub,
+Phys. Rev. D \textbf{110} (2024) 105002,
+\href{https://arxiv.org/abs/2407.14587}{arXiv:2407.14587}.
+\bibitem{Ke} W. Ke, Z. Liu and I. Mahbub,
+\href{https://arxiv.org/abs/2611.13096}{arXiv:2611.13096}.
+\bibitem{Jin} Q. Jin and B. Feng, JHEP \textbf{04} (2016) 123,
+\href{https://arxiv.org/abs/1507.00463}{arXiv:1507.00463}.
+\bibitem{Balkin} R. Balkin, G. Durieux, T. Kitahara, Y. Shadmi and
+Y. Weiss, JHEP \textbf{03} (2022) 129,
+\href{https://arxiv.org/abs/2112.09688}{arXiv:2112.09688}.
+\bibitem{Chen} J. Chen, K. Hagiwara, J. Kanzaki and K. Mawatari,
+Eur. Phys. J. C \textbf{83} (2023) 922,
+\href{https://doi.org/10.1140/epjc/s10052-023-12093-7}{doi:10.1140/epjc/s10052-023-12093-7}.
+\bibitem{FeynCalc}
+V. Shtabovenko, R. Mertig and F. Orellana,
+Comput. Phys. Commun. \textbf{306} (2025) 109357,
+\href{https://doi.org/10.1016/j.cpc.2024.109357}{doi:10.1016/j.cpc.2024.109357}.
+\bibitem{Archive} Five-point boundary in broken \(SU(2)\):
+reproduction scripts and benchmarks,
+\href{https://github.com/lm846802297-bit/off-shell-vector-polarization/tree/b4a2765d85b92f909b13ceebbbe15eccc7b87174/research-baselines/su2-charged-fivepoint-boundary}{versioned research archive} (commit \texttt{b4a2765}).
+\end{thebibliography}
+\end{document}
